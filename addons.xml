@@ -1,5 +1,516 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="context.skinshortcuts.addtomenu" name="Skin Shortcuts - Add To Menu" version="1.0.1" provider-name="BobCratchett,auramod">
+  <requires>
+    <import addon="xbmc.python" version="2.20.0"/>
+    <import addon="script.skinshortcuts" version="1.0.7"/>
+  </requires>
+  <extension point="kodi.context.item" library="addon.py">
+    <item>
+      <label>32000</label>
+      <visible>!StringCompare(ListItem.Label,..) + ListItem.IsFolder</visible>
+    </item>
+  </extension>
+  <extension point="kodi.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en_GB">Add folders to Skin Shortcuts managed menus</summary>
+    <description lang="en_GB">Add folders to Skin Shortcuts managed menus directly from the context menu. Requires skin support.</description>
+    <license>GNU General Public License, v2</license>
+    <forum></forum>
+    <source>https://github.com/Ignoble61/context.skinshortcuts.addtomenu</source>
+  </extension>
+</addon>
+
+    <addon id="hellyrepo.kodi" name="HellyRepo" version="0.2.6" provider-name="Helly">
+        <extension point="xbmc.addon.repository" name="HellyRepo">
+            <dir minversion="15.0.0">
+                <info compressed="false">https://raw.githubusercontent.com/Helly1206/_repo/isengard/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/Helly1206/_repo/isengard/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/Helly1206/_repo/isengard/</datadir>
+                <hashes>false</hashes>
+            </dir>
+            <dir minversion="15.9.0">
+                <info compressed="false">https://raw.githubusercontent.com/Helly1206/_repo/jarvis/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/Helly1206/_repo/jarvis/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/Helly1206/_repo/jarvis/</datadir>
+                <hashes>false</hashes>
+            </dir>
+            <dir minversion="16.9.0">
+                <info compressed="false">https://raw.githubusercontent.com/Helly1206/_repo/krypton/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/Helly1206/_repo/krypton/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/Helly1206/_repo/krypton/</datadir>
+                <hashes>false</hashes>
+            </dir>
+            <dir minversion="17.9.0">
+                <info compressed="false">https://raw.githubusercontent.com/Helly1206/_repo/leia/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/Helly1206/_repo/leia/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/Helly1206/_repo/leia/</datadir>
+                <hashes>false</hashes>
+            </dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>The repository contains addons and scripts to be used with kodi.</summary>
+            <description>HellyRepo is a repository that contains addons and scripts to be used with kodi.</description>
+            <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="plugin.service.gto" name="German Telecast Offers" version="2.0.12" provider-name="Birger Jesch">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py" />
+    <extension point="xbmc.service" library="starter.py" start="startup">
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Fetch todays TV Offers from different scrapers</summary>
+        <summary lang="de_DE">Holt die TV Tipps des Tages aus den RSS-Feeds diverser Webseiten</summary>
+        <language>de</language>
+        <description lang="en_GB">Fetch todays TV Offers from different scrapers
+
+This plugin needs a integration into the skin!
+Please refer to the README.txt into the folder named 'integration'.
+        </description>
+        <description lang="de_DE">Holt die TV Tipps des Tages aus den RSS-Feeds diverser Webseiten.
+
+Dieses Plugin benoetigt eine Skin-Integration!
+Hierfür bitte README.txt im Ordner 'integration' beachten.
+        </description>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
+        <source>https://github.com/b-jesch/plugin.service.gto</source>
+        <forum>http://www.kodinerds.net/index.php/Thread/50943-Release-TV-Widget-German-Telecast-Offers/</forum>
+        <email>birger.jesch@gmail.com</email>
+        <website>http://vdr4bj1.no-ip.org/index.php?action=list&amp;item=addon</website>
+        <news>
+            Info window on Krypton integrated, skin integration updated
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/lib/media/screenshots/screenshot_0.jpg</screenshot>
+            <screenshot>resources/lib/media/screenshots/screenshot_1.jpg</screenshot>
+            <screenshot>resources/lib/media/screenshots/screenshot_2.jpg</screenshot>
+            <screenshot>resources/lib/media/screenshots/screenshot_3.jpg</screenshot>
+            <screenshot>resources/lib/media/screenshots/screenshot_4.jpg</screenshot>
+            <screenshot>resources/lib/media/screenshots/screenshot_5.jpg</screenshot>
+            <screenshot>resources/lib/media/screenshots/screenshot_6.jpg</screenshot>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.guidos-skinbase"
+		name="[COLOR orange]Guidos SKINBASE.DE[/COLOR]"
+		version="1.0.0"
+		provider-name="SKINBASE,Litti19928">
+	<requires>
+		<!--py3 compliant-->
+		<!--<import addon="xbmc.python" version="3.0.0" targetversion="3.0.0"/>-->
+        <import addon="xbmc.python" version="2.24.0" />
+		<import addon="script.module.skinbase"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+	<summary>[COLOR orange]Created by litti19928,SKINBASE[/COLOR]</summary>
+	<description>[COLOR orange]PYTHON 2 AND 3[/COLOR]</description>
+	<disclaimer></disclaimer>
+	<language>de</language>
+	<platform>all</platform>
+	<license></license>
+	<forum></forum>
+	<website></website>
+	<email></email>
+	<source></source>
+	<news></news>
+	<assets>
+		<icon>resources/icon.jpg</icon>
+		<fanart>resources/fanart.jpg</fanart>
+		<banner></banner>
+		<clearlogo></clearlogo>
+		<screenshot></screenshot>
+	</assets>
+	</extension>
+</addon>
+
+<addon id="plugin.video.youtube" name="YouTube" version="6.8.8" provider-name="anxdpanic, bromix">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+        <import addon="script.module.six" version="1.11.0"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+        <import addon="script.module.inputstreamhelper" version="0.2.2" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="resources/lib/default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/startup.py" start="login"/>
+    <extension point="xbmc.python.module" library="resources/lib/"/>
+    <extension point="xbmc.addon.metadata">
+        <news>
+[fixup] encoding of subtitle track names
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <summary lang="en_GB">Plugin for YouTube</summary>
+        <description lang="en_GB">YouTube is one of the biggest video-sharing websites of the world.</description>
+        <disclaimer lang="en_GB">This plugin is not endorsed by Google</disclaimer>
+        <summary lang="he_IL">תוסף עבור YouTube</summary>
+        <description lang="he_IL">YouTube הוא אחד מאתרי שיתוף הווידאו הגדולים בעולם.</description>
+        <summary lang="de_DE">Plugin für YouTube</summary>
+        <description lang="de_DE">YouTube ist eines der größten Video-Sharing-Websites der Welt.</description>
+        <summary lang="pl_PL">Wtyczka YouTube</summary>
+        <description lang="pl_PL">YouTube jest jednym z największych na świecie serwisów udostępniania wideo.</description>
+        <summary lang="hu_HU">YouTube kiegészítő</summary>
+        <description lang="hu_HU">A YouTube világ egyik legnagyobb videómegosztó weboldala.</description>
+        <summary lang="es_ES">Plugin para YouTube</summary>
+        <description lang="es_ES">YouTube es uno de los sitios web más grande del mundo para compartir vídeos.</description>
+        <disclaimer lang="es_ES">Este add-on no está respaldado por Google</disclaimer>
+        <summary lang="es_MX">Plugin para YouTube</summary>
+        <description lang="es_MX">YouTube es uno de los más grandes sitios web de intercambio de videos del mundo.</description>
+        <disclaimer lang="es_MX">Este add-on no está respaldado por Google</disclaimer>
+        <summary lang="ru_RU">Видеодополнение YouTube</summary>
+        <description lang="ru_RU">YouTube - популярнейший видеохостинговый сайт, предоставляющий пользователям услуги хранения, доставки и показа видео.</description>
+        <summary lang="fr_FR">Plugin pour YouTube</summary>
+        <description lang="fr_FR">YouTube est l'un des plus grands sites de partage vidéos du monde.</description>
+        <summary lang="zh_CN">YouTube附加元件</summary>
+        <description lang="zh_CN">「Youtube」是全世界最大的影片分享網站</description>
+        <summary lang="zh_TW">YouTube附加元件</summary>
+        <description lang="zh_TW">「Youtube」是全世界最大的影片分享網站</description>
+        <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
+        <summary lang="bg_BG">Добавка за YouTube</summary>
+        <description lang="bg_BG">YouTube е един от най-големите уеб сайтове за споделяне на видео в целия свят.</description>
+        <summary lang="el_GR">Πρόσθετο YouTube</summary>
+        <description lang="el_GR">Το YouTube είναι μία από τις μεγαλύτερες ιστοσελίδες διαμοιρασμού βίντεο στον κόσμο.</description>
+        <disclaimer lang="el_GR">Η παρούσα μικροεφαρμογή δεν έχει υϊοθετηθεί από την Google</disclaimer>
+        <summary lang="nb_NO">Tillegg for YouTube</summary>
+        <description lang="nb_NO">YouTube er en av verdens største nettsider for videodeling.</description>
+        <summary lang="ko_KR">유튜브 플러그인</summary>
+        <description lang="ko_KR">유튜브는 세상에서 가장 큰 동영상 공유 사이트 중의 하나입니다.</description>
+        <summary lang="cs_CZ">Plugin pro YouTube</summary>
+        <description lang="cs_CZ">YouTube je jedna z největších webových stránek světa sdílející video.</description>
+        <disclaimer lang="cs_CZ">Tento plugin není schválen společností Google</disclaimer>
+        <summary lang="tr_TR">YouTube için eklenti</summary>
+        <description lang="tr_TR">YouTube, dünya üzerindeki en büyük video paylaşma platformlarından birisidir</description>
+        <disclaimer lang="tr_TR">Bu eklenti Google tarafından üretilmemiştir</disclaimer>
+        <platform>all</platform>
+        <license>GPL-2.0-only</license>
+        <forum>https://ytaddon.panicked.xyz/forum</forum>
+        <website>https://www.youtube.com</website>
+        <source>https://github.com/anxdpanic/plugin.video.youtube</source>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+    </extension>
+</addon>
+
+<addon id="repo.funkd" name="Funkd's Repository" version="1.0.1" provider-name="Funkd">
+	<extension point="xbmc.addon.repository" name="Funkd's Repository">
+		<info compressed="false">https://raw.githubusercontent.com/Funkd/repo.funkd/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/Funkd/repo.funkd/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/Funkd/repo.funkd/master/releases</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Funkd's Repository</summary>
+		<description>Repo for ScopeNox skin and other tools.</description>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.aeon-mq5-mod-krypton" name="Aeon MQ5 Kryptonmod Skin Repository" version="9.0.0" provider-name="scott967">
+	<extension point="xbmc.addon.repository" name="Aeon MQ5 Kryptonmod Skin Repository">
+		<info compressed="false">https://raw.githubusercontent.com/scott967/Aeon_MQ5_Mod_Krypton/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/scott967/Aeon_MQ5_Mod_Krypton/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/scott967/Aeon_MQ5_Mod_Krypton/master/Downloads</datadir>
+		<hashes>false</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install Aeon MQ 5 Kryptonmod skin from Add-on Repository</summary>
+		<description>Kryptonmod is a mod of skin Aeon MQ5 developed by Marcos Qui for XBMC Gotham intended for use in Kodi Jarvis (ver 16.+)</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.aeon.nox.silvo" name="Aeon Nox: SiLVO Repository" version="1.0.5" provider-name="SiLVO">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository" name="Aeon Nox: SiLVO Repo">
+		<dir minversion="15.0.0">
+			<info compressed="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/isengard/addons.xml</info>
+			<checksum>https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/isengard/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/isengard</datadir>
+		</dir>
+		<dir minversion="16.0.0">
+			<info compressed="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/jarvis/addons.xml</info>
+			<checksum>https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/jarvis/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/jarvis</datadir>
+		</dir>
+		<dir minversion="17.0.0">
+			<info compressed="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/krypton/addons.xml</info>
+			<checksum>https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/krypton/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/krypton</datadir>
+		</dir>
+		<dir minversion="17.9.0">
+			<info compressed="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/leia/addons.xml</info>
+			<checksum>https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/leia/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/mikesilvo164/repo.aeon.nox.silvo/raw/master/leia</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>My version of Aeon Nox 5</summary>
+		<description>Main Repository for Aeon Nox: SiLVO</description>
+		<platform>all</platform>
+		<news>[I]v1.0.5[/I][CR]- Leia support</news>
+	</extension>
+</addon>
+
+<addon id="repository.amber" name="Amber Repository" version="1.0.1" provider-name="bsoriano">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository" name="Amber Repo">
+		<dir minversion="17.9.0">
+			<info compressed="false">https://raw.githubusercontent.com/bartolomesoriano/repo.amber/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/bartolomesoriano/repo.amber/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/bartolomesoriano/repo.amber/master/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Amber skin for Leia</summary>
+		<description>Main Repository for Amber</description>
+		<platform>all</platform>
+		<news>[I]v1.0.1[/I][CR]- Fix GitHub URLs
+		[I]v1.0.0[/I][CR]- Initial Release</news>
+	</extension>
+</addon>
+
+<addon id="repository.auramod" version="1.0.5" name="Auramod Repository" provider-name="skyfsza">
+
+	<extension point="xbmc.addon.repository" name="Auramod BETA repository">
+		<info compressed="false">https://raw.githubusercontent.com/skyfsza/repository.auramod/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/skyfsza/repository.auramod/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/skyfsza/repository.auramod/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Kodi repository for beta/test versions of the Auramod Skin</summary>
+		<description lang="en">Kodi repository for beta/test versions of the Auramod Skin. This repo is for test/beta versions of my work only</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.axbmcuser" name="axbmcuser REPO" version="1.1.8" provider-name="axbmcuser">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository" name="axbmcuser REPO">
+		<dir minversion="16.9.0">
+			<info compressed="false">https://github.com/axbmcuser/_repo/raw/master/krypton/addons.xml</info>
+			<checksum>https://github.com/axbmcuser/_repo/raw/master/krypton/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/axbmcuser/_repo/raw/master/krypton</datadir>
+			<hashes>false</hashes>
+		</dir>
+		<dir minversion="17.9.0">
+			<info compressed="false">https://github.com/axbmcuser/_repo/raw/master/leia/addons.xml</info>
+			<checksum>https://github.com/axbmcuser/_repo/raw/master/leia/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/axbmcuser/_repo/raw/master/leia</datadir>
+			<hashes>false</hashes>
+		</dir>
+		<dir minversion="18.9.0">
+			<info compressed="false">https://github.com/axbmcuser/_repo/raw/master/matrix/addons.xml</info>
+			<checksum>https://github.com/axbmcuser/_repo/raw/master/matrix/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/axbmcuser/_repo/raw/master/matrix</datadir>
+			<hashes>false</hashes>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">This repository contains KODI addons from user "axbmcuser".</summary>
+		<description lang="en">This repository contains KODI addons from user "axbmcuser".</description>
+		<platform>all</platform>
+		<license/>
+		<forum>http://forum.kodi.tv/showthread.php?tid=242892</forum>
+		<website/>
+		<email/>
+		<source/>
+		<news>[B]1.1.8[/B] (2019-11-17)
+- New repo icon (higher resolution)
+
+[B]1.1.7[/B] (2019-08-24)
+- Cleanup (Bye Jarvis)
+
+[B]1.1.6[/B] (2019-08-24)
+- Added KODI 19 (Matrix) repo
+
+[B]1.1.5[/B] (2017-01-16)
+- Minor cleanup
+
+[B]1.1.4[/B] (2017-01-16)
+- Now supporting KODI 18 (Leia)
+
+[B]1.1.3[/B] (2016-08-03)
+- Minor cleanup
+
+[B]1.1.2[/B] (2016-07-23)
+- Changes for KODI 17 (Krypton): Repo is multi-dir based again (for now)
+		</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="repository.bingie" name="BINGIE Repository" provider-name="cartman.dos" version="1.0.2">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+	<extension name="bingie repository" point="xbmc.addon.repository">
+		<info compressed="false">https://raw.githubusercontent.com/cartmandos/repository.bingie/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/cartmandos/repository.bingie/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/cartmandos/repository.bingie/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Home of Titan BINGIE</summary>
+		<description lang="en">BINGIE repository</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+    <addon id="repository.guilouz" name="Guilouz Repository" version="1.0.3" provider-name="Guilouz">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="Guilouz Repository">
+                <info compressed="false">https://raw.githubusercontent.com/Guilouz/repository.guilouz/master/_repo/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/Guilouz/repository.guilouz/master/_repo/addons.xml.md5</checksum>
+                <datadir zip="true">https://github.com/Guilouz/repository.guilouz/raw/master/_repo</datadir>
+                <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary lang="en">Guilouz's addons repository</summary>
+            <summary lang="fr">Extensions du dépôt de Guilouz.</summary>
+            <description lang="en">Download and install Guilouz's addons repository.</description>
+            <description lang="fr">Téléchargez et installez les extensions du dépôt de Guilouz.</description>
+            <platform>all</platform>
+            <assets>
+ 			   <icon>resources/icon.png</icon>
+ 			   <fanart>resources/fanart.jpg</fanart>
+ 			   <screenshot>resources/screenshot-01.jpg</screenshot>
+ 			   <screenshot>resources/screenshot-02.jpg</screenshot>
+ 			   <screenshot>resources/screenshot-03.jpg</screenshot>
+ 		    </assets>
+            <news>[B]1.0.3[/B][CR]• Changes for Kodi Krypton[CR][CR][B]1.0.2[/B][CR]• Fixes[CR][CR][B]1.0.1[/B][CR]• Changes for Kodi Krypton[CR][CR][B]1.0.0[/B][CR]• Initial release</news>
+    </extension>
+</addon>
+
+<addon id="repository.jurialmunkey" name="jurialmunkey Alpha Repository" version="1.4-leia" provider-name="jurialmunkey">
+    <extension point="xbmc.addon.repository" name="jurialmunkey Alpha Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>jurialmunkey Alpha Repository</summary>
+        <description>A repository for alpha releases of jurialmunkey's skins.</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="repository.kodibrasilforum" name="Kodi Brasil Forum Repository" version="2.0.0" provider-name="Wanilton">
+	<extension point="xbmc.addon.repository" name="Kodi Brasil Forum Repository">
+		<info>http://files.moxiweb.com/wanilton/main/addons.xml</info>
+		<checksum>http://files.moxiweb.com/wanilton/main/addons.xml.md5</checksum>
+		<datadir zip="true">http://files.moxiweb.com/wanilton/main/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Kodi Brazil Forum Repository Addon</summary>
+		<description>Official Repository Kodi Brazil Forum</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.lattsrepo" name="[COLOR red]Latts'[/COLOR] [COLOR white]KODI[/COLOR] [COLOR blue]Repo[/COLOR]" version="1.0.9" provider-name="Latts">
+	<extension name="Latts' KODI Repo" point="xbmc.addon.repository">
+		<info compressed="false">https://holybid.com/kodi/repo/addons.xml</info>
+		<checksum>https://holybid.com/kodi/repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://holybid.com/kodi/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Latts' Kodi Repo.</summary>
+		<description lang="en">KODI addons provided by Latts.</description>
+		<platform>all</platform>
+		<assets>
+			<fanart>resources/fanart.jpg</fanart>
+			<icon>resources/icon.png</icon>
+		</assets>
+		<news>[B][COLOR=FF2CD13B]v1.0.9[/COLOR][/B] - Release date August 22, 2019[CR]
+[B][COLOR=FFFFA500]ADDITIONS[/COLOR][/B]
+• Updated version of the repo to use https instead of http.
+		</news>
+	</extension>
+</addon>
+
+<addon id="repository.marcelveldt" version="1.0.2" name="Marcelveldt's BETA repository" provider-name="marcelveldt, finkleandeinhorn">
+
+	<extension point="xbmc.addon.repository" name="Marcelveldt's BETA repository">
+		<info compressed="false">https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Kodi repository for beta/test versions of Marcelveldt's addons</summary>
+		<description lang="en">Kodi repository for beta/test versions of Marcelveldt's addons, for stable versions please just use the official Kodi repository. This repo is for test/beta versions of my work only</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+    <addon id="repository.mraap" name="mraap Repository" version="1.0.3" provider-name="[COLOR lime]TjOsT[/COLOR]">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="[COLOR blue]Aeon[/COLOR] [COLOR white]NOX[/COLOR][COLOR blue] Glass[/COLOR]">
+            <info compressed="false">http://www.mraap.de/kodi/.repo/skin/_skin/addons.xml</info>
+            <checksum>http://www.mraap.de/kodi/.repo/skin/_skin/addons.xml.md5</checksum>
+            <datadir zip="true">http://www.mraap.de/kodi/.repo/skin/_skin/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <description>Add-Ons for Kodi by TjOsT</description>
+            <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.skin.night"
+		name="Night repository"
+		version="1.0.0"
+		provider-name="bkury">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0"/>
+  </requires>
+	<extension point="xbmc.addon.repository">
+		<info>https://repo.openht.org/addons.xml</info>
+		<checksum>https://repo.openht.org/addons.xml.md5</checksum>
+		<datadir>https://repo.openht.org/data</datadir>
+		<artdir>https://repo.openht.org/data</artdir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_US">Night repository</summary>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon id="repository.skinbase.18" name="[COLOR orange]G[/COLOR]UIDO[COLOR orange]S[/COLOR] [COLOR orange]S[/COLOR]KINBAS[COLOR orange]E[/COLOR] Only Skins for 18" version="3.1.34" provider-name="[COLOR orange]GUIDO[/COLOR] | [COLOR skyblue]Kodiman[/COLOR] | [COLOR orange]HSK-DE[/COLOR]">
 	<extension point="xbmc.addon.repository" name="GUIDOS SKINBASE REPO">
 	<dir>
@@ -27,6 +538,1641 @@ The SkinBase is constantly being expanded and improved. Added to this are skins 
 			<screenshot>resources/screenshot-04.jpg</screenshot>
 		</assets>
 	</extension>
+</addon>
+
+<addon id="repository.skins.pkscout" name="pkscout's Skin Modifications" version="1.1.1" provider-name="pkscout">
+	<requires>
+		<import addon="xbmc.addon" version="13.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository" name="Skin modifications by pkscout">
+		<info compressed="true">https://raw.github.com/pkscout/repository.skins.pkscout/helix/addons.xml</info>
+		<checksum>https://raw.github.com/pkscout/repository.skins.pkscout/helix/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.github.com/pkscout/repository.skins.pkscout/helix/download</datadir>
+		<hashes>false</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Install skin modifications by pkscout</summary>
+		<description lang="en">Download and install skin modifications from pkscout.</description>
+		<disclaimer lang="en">These skin mods are only lightly supported.</disclaimer>
+		<platform>all</platform>
+		<nofanart>true</nofanart>
+	</extension>
+</addon>
+
+<addon id="repository.yellowdragon" name="Yellow Dragon Repository" version="18.7" provider-name="YLLOW_DRAGON">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository" name="Yellow Dragon Repository">
+		<info compressed="false">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon/leia/repo/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon/leia/repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon/leia/repo/</datadir>
+		<hashes>false</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">YLLOW_DRAGON addons repository for KODI Leia</summary>
+		<summary lang="ru_RU">Репозиторий дополнений YLLOW_DRAGON для KODI Leia</summary>
+		<summary lang="uk_UA">Репозиторій доповнень YLLOW_DRAGON для KODI Leia</summary>
+		<description  lang="en_GB">Download and install YLLOW_DRAGON addons repository.</description>
+		<description  lang="ru_RU">Загружайте и устанавливайте дополнения из репозитория YLLOW_DRAGON.</description>
+		<description  lang="uk_UA">Завантажуйте та встановлюйте доповненя з репозиторію YLLOW_DRAGON.</description>
+		<platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+		<news></news>
+	</extension>
+</addon>
+
+<addon id="resource.images.classificationicons.colour" name="Classification Icons - Colour" version="0.0.3" provider-name="Wyrm">
+	<extension point="kodi.resource.images" compile="true" type="classificationicons" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Colour Video Classification Icons</summary>
+		<description lang="en_GB">Colour square aspect (64x64) video classification icons for use with MPAA ListItem in Kodi. Can be used by Kodi skins using skin variables to show icons or the much quicker $INFO as a texture method. Details of usage and supported icons in the README.md file.</description>
+		<platform>all</platform>
+		<license>Creative Commons Attribution-Share Alike 3.0 United States</license>
+		<source>https://github.com/wyrm65/resource.images.classificationicons.colour</source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>0.0.3[CR]  - Add additional naming of Spanish files to allow for Embuary helper returning additional characters in locale name .[CR]  - Update readme file to show current state of play.</news>
+	</extension>
+</addon>
+
+<addon id="resource.images.moviegenreicons.coloured" name="Movie Genre Icons - Coloured" version="0.0.8" provider-name="Team Kodi">
+	<extension point="kodi.resource.images" compile="true" type="moviegenreicons" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Coloured Movie Genre Icons</summary>
+		<description lang="en">Coloured Movie Genre Icons</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="resource.images.moviegenreicons.xzener-flat" name="Movie Genre Icons - Xzener's Flat Icons" version="0.0.3" provider-name="Xzener, Gade">
+	<extension point="kodi.resource.images" compile="true" type="moviegenreicons" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Xcener's Flat Movie Genre Icons</summary>
+		<description lang="en">Transparent flat Movie Genre Icons made by Xzener.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="resource.images.musicgenreicons.poster" name="Music Genre Icons - Poster" version="0.0.7" provider-name="Team Kodi">
+	<extension point="kodi.resource.images" compile="true" type="musicgenreicons" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Music Genre Icons poster style</summary>
+		<description lang="en">Music Genre Icons in a poster style</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="resource.images.musicgenreicons.text" name="Music Genre Icons - Text" version="0.1.0" provider-name="Team Kodi">
+	<extension point="kodi.resource.images" compile="true" type="musicgenreicons" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Music Genre Icons with text</summary>
+		<description lang="en">Music Genre Icons with text</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="resource.images.recordlabels.white" name="Recordlabel Icons - White" version="0.0.7" provider-name="Team Kodi">
+	<extension point="kodi.resource.images" compile="true" type="recordlabels" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">White Recordlabel Icons</summary>
+		<description lang="en">White Recordlabel Icons</description>
+		<platform>all</platform>
+		<license>Creative Commons Attribution-Share Alike 3.0 United States</license>
+	</extension>
+</addon>
+
+<addon id="resource.images.studios.white" name="Studio Icons - White" version="0.0.25" provider-name="Team Kodi">
+	<extension point="kodi.resource.images" compile="true" type="studios" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">White Studio Icons</summary>
+		<description lang="en">White Studio Icons</description>
+		<platform>all</platform>
+		<license>Creative Commons Attribution-Share Alike 3.0 United States</license>
+	</extension>
+</addon>
+
+<addon id="resource.images.weatherfanart.multi" name="Weather Fanart - Multi" version="0.0.6" provider-name="Team Kodi">
+	<extension point="kodi.resource.images" compile="false" type="weather" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Weather Fanart Multi</summary>
+		<description lang="en">Multiple Weather Fanart images for every weather condition</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="resource.images.weatherfanart.prairie" name="Weather Fanart - Prairie" version="0.0.5" provider-name="Silverxxx,Team Kodi">
+	<extension point="kodi.resource.images" compile="false" type="weather" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Little House On The Prairie Weather Fanart</summary>
+		<description lang="en">Weather Fanart based on variations of the Little House On The Prairie image.</description>
+		<platform>all</platform>
+		<forum>http://forum.kodi.tv/showthread.php?tid=51991</forum>
+	</extension>
+</addon>
+
+<addon id="resource.images.weathericons.animated" name="Weather Icons - Animated" version="0.0.6" provider-name="Team Kodi">
+	<extension point="kodi.resource.images" compile="true" type="weather" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Animated Weather Icons</summary>
+		<description lang="en">Animated Weather Icons</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="resource.images.weathericons.white" name="Weather Icons - White" version="0.0.6" provider-name="Team Kodi">
+	<extension point="kodi.resource.images" compile="true" type="weather" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">White Weather Icons</summary>
+		<description lang="en">White Weather Icons</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="resource.uisounds.aeonmq6" version="1.0.0" name="Aeon MQ 6 UI Sounds" provider-name="MarcosQui">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0"/>
+  </requires>
+  <extension point="kodi.resource.uisounds"/>
+  <extension point="kodi.addon.metadata">
+    <summary lang="en">Aeon MQ 6 UI Sounds.</summary>
+	<summary lang="pt_br">Interface de son da skin Aeon MQ 6.</summary>
+    <description lang="en">Aeon MQ 6 UI Sounds</description>
+	<description lang="pt_br">Interface de son da skin Aeon MQ 6.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="resource.uisounds.amber" version="1.0.0" name="Amber UI Sounds" provider-name="Jester">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0"/>
+  </requires>
+  <extension point="kodi.resource.uisounds"/>
+  <extension point="kodi.addon.metadata">
+    <summary lang="en">Amber UI sounds</summary>
+    <description lang="en">Amber UI sounds</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="resource.uisounds.apptv" version="1.0.4" name="AppTV UI Sounds" provider-name="Wyrm">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0"/>
+  </requires>
+  <extension point="kodi.resource.uisounds"/>
+  <extension point="kodi.addon.metadata">
+    <summary lang="en">AppTV GUI sounds</summary>
+    <description lang="en">AppTV GUI sounds</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.artistslideshow" name="Artist Slideshow" provider-name="pkscout,ronie" version="3.2.2">
+	<requires>
+		<import addon="xbmc.python" version="2.26.0" />
+		<import addon="xbmc.addon" version="17.9.0" />
+		<import addon="script.module.requests" version="2.3.0" />
+		<import addon="script.module.defusedxml" version="0.6.0" />
+		<import addon="script.module.kodi-six" version="0.0.3" />
+		<import addon="script.module.future" version="0.16.0.4" />
+	</requires>
+	<extension library="default.py" point="xbmc.python.script">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<news>
+v.3.2.2
+- fix for crash if Artist Information folder is stored on a network volume
+- Spanish translations
+		</news>
+		<assets>
+        	<icon>icon.png</icon>
+        </assets>
+		<summary lang="ar_SA">حمل المزيد من الصور والمعلومات عن الفنان الذى يُغنِى حالياً</summary>
+		<summary lang="be_BY">Download images and additional info of the currently playing artist</summary>
+		<summary lang="bg_BG">Сваля изображения и допълнителна инф. за изпълнителя на текущата песен</summary>
+		<summary lang="ca_ES">Descàrrega imatges i informació addicional de l'artista que s'està reproduint</summary>
+		<summary lang="da_DK">Download billeder og ekstra info om kunstneren, der spiller i øjeblikket</summary>
+		<summary lang="de_DE">Downloade Bilder und zusätzliche Informationen des aktuellen abspielenden Künstlers.</summary>
+		<summary lang="el_GR">Κατεβάστε εικόνες και επιπλέον πληροφορίες του τρέχοντος καλλιτέχνη</summary>
+		<summary lang="en_GB">Download images and additional info of the currently playing artist</summary>
+		<summary lang="en_NZ">Download images and additional info of the currently playing artist</summary>
+		<summary lang="en_US">Download images and additional info of the currently playing artist</summary>
+		<summary lang="es_ES">Descarga imágenes e información adicional del artista que esté sonando</summary>
+		<summary lang="es_AR">Bajá imágenes e información adicional sobre el artista </summary>
+		<summary lang="fr_FR">Télécharger les images et les informations additionnelles de l'artiste en cours de lecture</summary>
+		<summary lang="fr_CA">Télécharger des images et des infos additionnelles sur l'artiste écouté</summary>
+		<summary lang="gl_ES">Descarga imaxes e info. adicional do artista que está a soar</summary>
+		<summary lang="he_IL">הורד תמונות ומידע נוסף על האמן המושמע כעת</summary>
+		<summary lang="hr_HR">Preuzimite slike i dodatne informacije o trenutno reproduciranom izvođaču</summary>
+		<summary lang="hu_HU">Képeket és kiegészítő információkat tölt le a jelenleg játszott előadóról</summary>
+		<summary lang="it_IT">Scarica immagini ed informazioni addizionali dell'artista attualmente in esecuzione</summary>
+		<summary lang="ja_JP">現在再生中のアーティストの画像と追加情報をダウンロードする</summary>
+		<summary lang="ko_KR">현재 재생중인 아티스트의 이미지와 추가 정보 다운로드</summary>
+		<summary lang="nl_NL">Downloaden van afbeeldingen en extra informatie van te horen artiest</summary>
+		<summary lang="nb_NO">Last ned bilder og ytterligere informasjon om artisten som spilles av</summary>
+		<summary lang="pl_PL">Pobieraj obrazy i dodatkowe informacje o aktualnie odtwarzanym wykonawcy</summary>
+		<summary lang="pt_PT">Transferir imagens e info adicional do artista em reprodução agora</summary>
+		<summary lang="pt_BR">Transferência de imagens e informações adicionais de artistas que estejam sendo reproduzidos</summary>
+		<summary lang="ru_RU">Загрузить фото и дополнительную информацию об воспроизводимом исполнителе</summary>
+		<summary lang="sk_SK">Stiahnuť obrázky a dodatočné informácie o práve hrajúcich interpretoch</summary>
+		<summary lang="sl_SI">Naložite slike in dodatne informacije, za trenutno predvajanega izvajalca</summary>
+		<summary lang="sv_SE">Ladda ner bilder samt ytterligare information om den spelade artisten</summary>
+		<summary lang="zh_CN">下载当前播放艺人的图片和附加信息</summary>
+		<description lang="ar_SA">ملحق يساعدك على تَنِزِيل صور ومعلومات إضافيه عن الفنان الذى تستمع اليه حالياً من موقع fanart.tv و theaudiodb.com. كما يمكنك جعل جلد واجهتك الحالى يستخدم كل ما سبق ﻹنشاء عروض شرائح للفنان الذى تستمع إليه</description>
+		<description lang="bg_BG">Добавката сваля картинки и допълнителна информация от www.fanart.tv и www.theaudiodb.com за изпълнителя който звучи в момента. Картинките, заедно с фанарт изображенията на изпълнителя, може да се ползват от облика, за създаването на слайдшоу за изпълнителя, който звучи в момента.</description>
+		<description lang="ca_ES">Complement per descarregar imatges i informació addicional de fanart.tv i theaudiodb.com de l'artista que s'està reproduint. Les imatges, juntament amb les imatges locals d'artistes, i la informació, pot ser utilitzada per la pell per crear una presentació de diapositives per a l'artista que s'està escoltant.</description>
+		<description lang="de_DE">Addon um Bilder und zusätzliche Informationen von fanart.tv und theaudiodb.com zum aktuell gespielten Künstler herunterzuladen. Diese Bilder können zusammen mit den lokalen Künstlerbildern und Infos vom Skin genutzt werden, um eine Slideshow für den aktuell angehörten Künstler zu erstellen.</description>
+		<description lang="el_GR">Πρόσθετο για τη λήψη εικόνων και επιπλέον πληροφοριών από το fanart.tv  και το theaudiodb.com για τον τρέχοντα καλλιτέχνη. Οι εικόνες, μαζί με τοπικές εικόνες του καλλιτέχνη καθώς και πληροφορίες, μπορούν να χρησιμοποιηθούν από το κέλυφος για τη δημιουργία παρουσιάσεων διαφανειών του καλλιτέχνη η μουσική του οποίου ακούγεται.</description>
+		<description lang="en_GB">Addon to download images and additional information from fanart.tv and theaudiodb.com of the currently playing artist. The images, along with local artists' images, and info can be used by the skin to create a slideshow for the artist being listened to.</description>
+		<description lang="en_NZ">Addon to download images and additional information from fanart.tv and theaudiodb.com of the currently playing artist. The images, along with local artists' images, and info can be used by the skin to create a slideshow for the artist being listened to.</description>
+		<description lang="en_US">Addon to download images and additional information from fanart.tv and theaudiodb.com of the currently playing artist. The images, along with local artists' images, and info can be used by the skin to create a slideshow for the artist being listened to.</description>
+		<description lang="es_ES">Addon para descargar imágenes e información adicional de fanart.tv y theaudiodb.com del artista que se está reproduciendo. Las imágenes, junto con imágenes de artistas locales, y la información puede ser utilizada por la piel para crear una presentación de diapositivas para el artista que se está escuchando.</description>
+		<description lang="fr_CA">Addiciel pour télécharger des images et des informations additionnelles sur fanart.tv et theaudiodb.com de l'artiste en cours d'écoute. Les images, ainsi que les images locales de l'artiste, et les infos peuvent être utilisées par l'habillage pour créer un diaporama pour l'artiste en cours d'écoute.</description>
+		<description lang="gl_ES">Complemento para descargar imaxes e información adicional de fanart.tv e theaudiodb.com do artista que está a soar. Estas imaxes, xunto cas do artista gardadas en local e a información pódeas usar o tema para crear unha presentación. </description>
+		<description lang="he_IL">הרחבה להורדת תמונות ומידע נוסף על האמן המושמע כעת מ-fanart.tv ו- theaudiodb.com. התמונות, בנוסף לתמונות אמנים מקומיות והמידע על אמן יכולים לשמש את המעטפת ליצירת מצגת עבור האמן המושמע כעת.</description>
+		<description lang="hr_HR">Dodatak za preuzimanje slika i dodatnih informacije trenutno reproduciranog izvođača s fanart.tv, theaudiodb.com i theaudiodb.com. Slike, zajedno s lokalnim slikama izvođača i informacijama mogu se koristiti s presvlakom za stvaranje slikovne prezentacije izvođača koji se sluša.</description>
+		<description lang="hu_HU">A Kiegészítő letölt képeket és infromációkat a fanart.tv és theaudiodb.com oldalakról az éppen hallgatott előadóhoz. A képek a helyben tárolt képekkel együtt felhasználhatóak a Felszín által diavetítéshez.</description>
+		<description lang="it_IT">Addon per scaricare immagini ed informazioni aggiuntive da fanart.tv e theaudiodb.com sull'artista attualmente in esecuzione. Le immagini possono essere usate dallo skin, insieme a quelle locali, per creare una presentazione  per l'artista che si sta ascoltando.</description>
+		<description lang="ko_KR">현재 재생중인 아티스트의 이미지와 추가정보를 fanart.tv 와 theaudiodb.com 에서 다운로드합니다. 다운로드한 이미지와 정보는 로컬 이미지와 함께 현재 재생중인 음악의 아티스트 슬라이드쇼에 사용할 수 있습니다.</description>
+		<description lang="nl_NL">Add-on om afbeeldingen en bijkomende informatie van Fanart.tv en theaudiodb.com van de te horen artiest binnen te halen. de afbeeldingen, net als de lokaal aanwezige artiest-afbeeldingen en -info kunnen gebruikt worden door de skin om een diashow te tonen van de artiest di nu beluisterd wordt.</description>
+		<description lang="nb_NO">Tillegg for å laste ned bilder og ytterligere informasjon fra fanart.tv og theaudiodb.com for artisten som spilles av for øyeblikket. Bildene, sammen med lokale artistbilder og info, kan bli brukt av skallet til å lage en lysbildefremvisning for artisten som blir lyttet til for øyeblikket.</description>
+		<description lang="pl_PL">Wtyczka pobiera obrazy i dodatkowe informacje z fanart.tv oraz theaudiodb.com o aktualnie odtwarzanym wykonawcy. Obrazami wraz z informacjami o wykonawcach, mogą być wykorzystywane przez skórę do tworzenia pokazu slajdów dla artysty, którego aktualnie słuchasz.</description>
+		<description lang="pt_PT">Um add-on para transferir imagens e informação adicional do artista em reprodução no momento, a partir de fanart.tv e theaudiodb.com. As imagens e a informação, assim como as imagens locais dos artistas, podem ser usadas pelo tema para criar uma apresentação de slides do artista em escuta no momento.</description>
+		<description lang="pt_BR">Addon para download de imagens e informações adicionais do artista que está sendo reproduzido provido por fanart.tv e theaudiodb.  Tais dados e imagens serão usados pelas skins para criarem um slideshow dos artistas quando estivermos escutando-os.</description>
+		<description lang="ru_RU">Дополнение для загрузки изображений и дополнительной информации о воспроизводимом исполнителе с ресурсов fanart.tv and theaudiodb.com. Загруженные изображения и доп. информация, наравне с локальными, могут быть использованы для создания слайд-шоу во время прослушивания композиций.</description>
+		<description lang="sl_SI">Dodatek za prenos slik in dodatnih informacij  iz fanart.tv in theaudiodb.com za trenutno predvajanega izvajalca. Slike, skupaj z lokalnimi slikami izvajalcev ter informacije, se lahko uporabljajo s preobleko za ustvarjanje diaprojekcije slik izvajalca, ki ga trenutno poslušate.</description>
+		<description lang="sv_SE">Tillägg för att ladda ner bilder och tilläggsinformation från fanart.tv och theaudiodb.com om artisten som spelas för tillfället. Bilderna, tillsammans med lokala artistbilder och information, kan användas av skinnet för att skapa ett bildspel av artisten man lyssnar på.</description>
+		<description lang="zh_CN">从fanart.tv和theaudiodb.com下载当前播放艺人的图片和附加信息的插件。这此图片可以和本地艺人图片及信息一起，被皮肤用来创建正收听的艺人的幻灯片。</description>
+		<platform>all</platform>
+		<license>GPL-2.0-only</license>
+		<forum>https://forum.kodi.tv/showthread.php?t=124880</forum>
+		<website>https://kodi.wiki/index.php?title=Add-on:Artist_Slideshow</website>
+		<email>artistslideshow.xbmc@gmail.com</email>
+		<source>https://github.com/pkscout/script.artistslideshow</source>
+	</extension>
+</addon>
+
+<addon id="script.artistslideshow-helper" name="Artist Slideshow Helper" version="0.4.5" provider-name="pkscout">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+		<import addon="xbmc.addon" version="14.0.0"/>
+		<import addon="script.module.simplejson" version="3.3.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+    <extension point="xbmc.addon.metadata">
+        <broken>Removal requested by the author</broken>
+		<news>v.0.4.4
+			  - fix for crash when image migration is disabled</news>
+		<summary lang="de">Hilft bei der Verwaltung von Interpreten-, Hintergrund- und Cache-Bilder</summary>
+		<summary lang="el">Βοηθός Διαχείρισης Αποθηκευμένων Εικόνων Καλλιτέχνη</summary>
+		<summary lang="en">Help manage Artist Slideshow Cache Images</summary>
+		<summary lang="en_NZ">Help manage Artist Slideshow Cache Images</summary>
+		<summary lang="en_US">Help manage Artist Slideshow Cache Images</summary>
+		<summary lang="es">Ayudar a controlar cache de imágenes de presentación de artistas</summary>
+		<summary lang="fr_CA">Aide à gérer lles images du cache du diaporama des artistes</summary>
+		<summary lang="gl">Axudar a xestionar a Caché de Imaxes na presentación deslizante de Artistas</summary>
+		<summary lang="hu">Művész képek gyorsítótárazásának menedzselése</summary>
+		<summary lang="is">Hjálpar við að halda utan um myndir í biðminni fyrir skyggnusýningar listamanna</summary>
+		<summary lang="it">Aiuta la gestione della cache immagini artista</summary>
+		<summary lang="ko">Artist Slideshow 캐시 이미지 관리 도우미</summary>
+		<summary lang="lt">Padeda tvarkyti atlikėjų skaidrių demonstracijos talpyklos paveikslėlius</summary>
+		<summary lang="nl">Helpt bij het beheren van artiesten diashow Cache afbeeldingen</summary>
+		<summary lang="pl">Pomaga zarządzać, pokazem slajdów artysty, pamięci podręcznej</summary>
+		<summary lang="pt">Ajuda a gerir as imagens de cache de Artist Slideshow</summary>
+		<summary lang="pt_BR">Ajuda a gerenciar Imagens do cache de artistas do script Artist Slideshow</summary>
+		<summary lang="sv">Hantera cachade bilder för artistbildspel</summary>
+		<summary lang="zh">帮助管理个歌手幻灯片缓存图像</summary>
+		<description lang="el">Το Πρόσθετο Artist Slideshow Helper παρέχει μια λίστα ονομάτων καλλιτεχνών συνδεδεμένων με τον αντίστοιχο φάκελο hash στο φάκελο εικόνων του Artist Slideshow, προκειμένου να διευκολύνει λίγο τη διαχείρισή τους. Σας επιτρέπει, επίσης, να μεταφέρετε εικόνες εκτός του φακέλου προσωρινής αποθήκευσης, σε κάποιον άλλο τοπικό φάκελο.</description>
+		<description lang="en">Artist Slideshow Helper provides a list artist names matched to their hash directory in your Artist Slideshow image directory to make things a little easier to manage.  It also allows you to migrate images out of the cache directory into a local directory structure.</description>
+		<description lang="en_US">Artist Slideshow Helper provides a list artist names matched to their hash directory in your Artist Slideshow image directory to make things a little easier to manage.  It also allows you to migrate images out of the cache directory into a local directory structure.</description>
+		<description lang="es">Artist Slideshow Helper proporciona una lista de nombres de los artistas que coinciden con su carpeta de imágenes de presentación del artista para hacer las cosas un poco más fáciles de manejar. También le permite migrar las imágenes fuera del directorio de caché en una estructura de directorio local.</description>
+		<description lang="fr_CA">L'assistant du diaporama des artistes fournit une liste des noms d'artistes jumelé à leur répertoire de hachage dans votre répertoire d'images du diaporama des artistes pour rendre les choses un peu plus facile à gérer. Il vous permet également de migrer des images sur le répertoire de cache dans une structure de répertoire local.</description>
+		<description lang="gl">O Asistente de Diapositivas de Artistas proporciónalle unha listaxe de nomes de artistas ligada ao hash dos seus cartafoles no cartafol das imaxes de artistas para facer as cousas algo máis doadas. Permítelle tamén migrar as imaxes dende o cartafol da caché a unha estrutura de cartafol local.</description>
+		<description lang="hu">Művész Diavetítés Segítő biztosítja a művészek neveinek a listáját összekapcsolva a  Művész Diavetítés  kép könyvtárral hogy  egyszerűbb legyen kezelni.  Lehetővé teszi hogy képeket migráljon a gyorsítótár könyvtárból egy helyi könyvtárstruktúrába.</description>
+		<description lang="is">Artist Slideshow Helper gefur upp lista af listamannanöfnum samtengdum við hash skráasafn í Artist Slideshow myndasafni þínu til að auðvelda aðeins utanumhald.  Það leyfir þér líka að flytja út myndir úr skráasafni biðminnis yfir í nærtækt skráasafn þitt.</description>
+		<description lang="it">Artist Slideshow Hlper provvede un'accoppiamento tra il nome di un artista in lista con la sua cartella immagini artista per rendere le cose un po' più semplici da gestire. Consente inoltre di migrare le immagini fuori dalla directory della cache verso una cartella locale</description>
+		<description lang="ko">Artist Slideshow의 이미지가 저장된 캐시 디렉터리에서 해시값과 일치하는 아티스트를 목록화하여 관리상의 편의를 제공합니다. 또 캐시 디텍터리의 이미지를 사용자 로컬 디렉터리로 마이그레이션 해 줍니다.</description>
+		<description lang="lt">Artist Slideshow Helper pateikia atlikėjų vardų sąrašą sutapdintą su jų maišos katalogu Artist Slideshow atvaizdų kataloge, kad būtų lengviau tvarkyti. Jis taip pat leidžia migruoti atvaizdus iš talpyklos katalogo į vietinio katalogo struktūrą.</description>
+		<description lang="nl">Artiesten divavoorstellingshelper  Biet een lijst van artiestennamen aan wat overeenkomt naar hun hashmap, dit in jouw artiesten diavoorstelling afbeeldingen map zodat het iets gemakkelijker is te beheren. het geeft je ook de mogelijkheid afbeeldingen te verplaatsen uit de cache map in een lokale map structuur.</description>
+		<description lang="pl">Artist Slideshow Helper zawiera listę hash nazw wykonawców dopasowaną do katalogów pokazu slajdów artysty, co pozwala łatwiej zarządzać obrazami. Pozwala również, przenosić zdjęcia z katalogu pamięci podręcznej do lokalnej struktury katalogów.</description>
+		<description lang="pt">O Artist Slideshow Helper exibe uma lista de nomes de artistas correspondentes aos seus valores hash na pasta de imagens Artist Slideshow, tornando tudo mais fácil de gerir. Também permite a exportação de imagens da pasta de cache para uma estrutura de pastas local.</description>
+		<description lang="pt_BR">Artist Slideshow Helper fornece uma lista com nomes de artistas combinados com o seu diretório de hash do diretório de imagens do Artist Slideshow para tornar as coisas um pouco mais fácil de gerir. Ele também permite que você migre imagens para fora do diretório do cache em uma estrutura de diretório local.</description>
+		<description lang="sv">Artistbildspelsassistenten tillhandahåller en lista med artistnamn som är hashmatchade till mappar i din bildmapp för artistbildspel för att underlätta hanteringen av dem. Den hjälper dig också att migrera bilder ut från mappen till en lokal mappstruktur.</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<forum>http://forum.xbmc.org/showthread.php?tid=181454</forum>
+		<website>http://wiki.xbmc.org/index.php?title=Add-on:Artist_Slideshow-Helper</website>
+		<email>artistslideshow.xbmc@gmail.com</email>
+		<source>https://github.com/pkscout/script.artistslideshow-helper</source>
+	</extension>
+</addon>
+
+<addon id="script.artwork.beef.2" name="Artwork Beef 2" version="0.28.3~adev" provider-name="rmrector,skinbase">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="xbmc.json" version="6.20.0" />
+		<import addon="script.module.simplejson" version="3.3.0" />
+		<import addon="script.module.requests" version="2.9.1" />
+		<import addon="script.common.plugin.cache" version="2.5.8" />
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<menu id="kodi.core.manage">
+				<item library="context.py">
+					<label>AB: $ADDON[script.artwork.beef 32410]</label>
+					<visible>!Skin.HasSetting(disablecontext:script.artwork.beef) + [StringCompare(ListItem.DBTYPE, movie) | StringCompare(ListItem.DBTYPE, set) | StringCompare(ListItem.DBTYPE, tvshow) | StringCompare(ListItem.DBTYPE, episode) | StringCompare(ListItem.DBTYPE, musicvideo) | String.IsEqual(ListItem.DBTYPE, movie) | String.IsEqual(ListItem.DBTYPE, set) | String.IsEqual(ListItem.DBTYPE, tvshow) | String.IsEqual(ListItem.DBTYPE, episode) | String.IsEqual(ListItem.DBTYPE, musicvideo)]</visible>
+				</item>
+				<item library="context_gui.py">
+					<label>AB: $ADDON[script.artwork.beef 32411]</label>
+					<visible>!Skin.HasSetting(disablecontext:script.artwork.beef) + [StringCompare(ListItem.DBTYPE, movie) | StringCompare(ListItem.DBTYPE, set) | StringCompare(ListItem.DBTYPE, tvshow) | StringCompare(ListItem.DBTYPE, episode) | StringCompare(ListItem.DBTYPE, musicvideo) | String.IsEqual(ListItem.DBTYPE, movie) | String.IsEqual(ListItem.DBTYPE, set) | String.IsEqual(ListItem.DBTYPE, tvshow) | String.IsEqual(ListItem.DBTYPE, episode) | String.IsEqual(ListItem.DBTYPE, musicvideo)]</visible>
+				</item>
+				<item library="context_debug_remove.py">
+					<label>AB: $ADDON[script.artwork.beef 32427]</label>
+					<visible>Skin.HasSetting(enablecontext:script.artwork.beef.debug) + [StringCompare(ListItem.DBTYPE, movie) | StringCompare(ListItem.DBTYPE, set) | StringCompare(ListItem.DBTYPE, tvshow) | StringCompare(ListItem.DBTYPE, episode) | StringCompare(ListItem.DBTYPE, musicvideo) | StringCompare(ListItem.DBTYPE, season) | String.IsEqual(ListItem.DBTYPE, movie) | String.IsEqual(ListItem.DBTYPE, set) | String.IsEqual(ListItem.DBTYPE, tvshow) | String.IsEqual(ListItem.DBTYPE, episode) | String.IsEqual(ListItem.DBTYPE, musicvideo) | StringCompare(ListItem.DBTYPE, season)]</visible>
+				</item>
+				<item library="context_debug_logitem.py">
+					<label>AB: $ADDON[script.artwork.beef 32430]</label>
+					<visible>Skin.HasSetting(enablecontext:script.artwork.beef.debug) + [StringCompare(ListItem.DBTYPE, movie) | StringCompare(ListItem.DBTYPE, set) | StringCompare(ListItem.DBTYPE, tvshow) | StringCompare(ListItem.DBTYPE, episode) | StringCompare(ListItem.DBTYPE, musicvideo) | String.IsEqual(ListItem.DBTYPE, movie) | String.IsEqual(ListItem.DBTYPE, set) | String.IsEqual(ListItem.DBTYPE, tvshow) | String.IsEqual(ListItem.DBTYPE, episode) | String.IsEqual(ListItem.DBTYPE, musicvideo)]</visible>
+				</item>
+			</menu>
+			<item library="context.py">
+				<label>AB: $ADDON[script.artwork.beef 32410]</label>
+				<visible>!Skin.HasSetting(disablecontext:script.artwork.beef) + [String.StartsWith(System.BuildVersion,18) | String.StartsWith(System.BuildVersion,19)] + [String.IsEqual(ListItem.DBTYPE, artist) | String.IsEqual(ListItem.DBTYPE, album) | String.IsEqual(ListItem.DBTYPE, song)]</visible>
+			</item>
+			<item library="context_gui.py">
+				<label>AB: $ADDON[script.artwork.beef 32411]</label>
+				<visible>!Skin.HasSetting(disablecontext:script.artwork.beef) + [String.StartsWith(System.BuildVersion,18) | String.StartsWith(System.BuildVersion,19)] + [String.IsEqual(ListItem.DBTYPE, artist) | String.IsEqual(ListItem.DBTYPE, album) | String.IsEqual(ListItem.DBTYPE, song)]</visible>
+			</item>
+			<item library="context_debug_remove.py">
+				<label>AB: $ADDON[script.artwork.beef 32427]</label>
+				<visible>Skin.HasSetting(enablecontext:script.artwork.beef.debug) + [String.StartsWith(System.BuildVersion,18) | String.StartsWith(System.BuildVersion,19)] + [String.IsEqual(ListItem.DBTYPE, artist) | String.IsEqual(ListItem.DBTYPE, album) | String.IsEqual(ListItem.DBTYPE, song)]</visible>
+			</item>
+			<item library="context_debug_logitem.py">
+				<label>AB: $ADDON[script.artwork.beef 32430]</label>
+				<visible>Skin.HasSetting(enablecontext:script.artwork.beef.debug) + [String.StartsWith(System.BuildVersion,18) | String.StartsWith(System.BuildVersion,19)] + [String.IsEqual(ListItem.DBTYPE, artist) | String.IsEqual(ListItem.DBTYPE, album) | String.IsEqual(ListItem.DBTYPE, song)]</visible>
+			</item>
+		</menu>
+	</extension>
+	<extension point="xbmc.service" start="login" library="service.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Automatically adds extra artwork for your media.</summary>
+		<description lang="en">Artwork Beef automatically adds extra artwork for TV shows and movies into your library. It grabs them from wonderful web services and the file system.</description>
+		<disclaimer lang="en">Artwork sources: fanart.tv, TheTVDB.com, The Movie Database, TheAudioDB, KyraDB</disclaimer>
+		<summary lang="es">Agrega automáticamente ilustraciones adicionales para sus medios.</summary>
+		<description lang="es">Artwork Beef agrega automáticamente ilustraciones adicionales para Series TV y Películas a su biblioteca. Las ilustraciones son agregadas desde Servicios web y el Sistema de archivos local.</description>
+		<disclaimer lang="es">Fuente para ilustraciones: fanart.tv, TheTVDB.com, The Movie Database, TheAudioDB, KyraDB</disclaimer>
+		<news>
+-Fix German
+v0.28.2 (2020-08-09)
+- Fix: avoid adding duplicate fanart from TVDB
+- Fix: log full URL when download fails
+
+v0.28.1 (2020-04-25)
+- Fix: remove KyraDB
+
+v0.28.0 (2020-02-08)
+- Feature: Add "Path exclusion" settings to skip processing media items by path
+		</news>
+		<source>https://github.com/rmrector/script.artwork.beef</source>
+		<forum>https://forum.kodi.tv/showthread.php?tid=258886</forum>
+		<website>https://rmrector.github.io/script.artwork.beef/</website>
+		<license>The MIT License</license>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon
+    id="script.artwork.downloader"
+    name="Artwork Downloader"
+    version="18.0.0"
+    provider-name="Martijn"
+    >
+  <requires>
+    <import addon="xbmc.python"                 version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.script"         library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Downloads Artwork for TV shows, Movies and Musicvideos in your library</summary>
+    <description lang="en_GB">Downloads all available artwork for TV shows, Movies and Musicvideos in your library. Check the options for supported artwork[CR]Artwork sources:[CR]www.fanart.tv[CR]www.thetvdb.com[CR]www.themoviedb.org[CR]Remark:[CR]Check your skin to see what type of artwork is supported![CR]Each TV Show/Movie must have its own folder![CR]Skin integration:[CR]See readme file</description>
+    <disclaimer lang="en_GB">For bugs, requests or general questions visit the Artwork Downloader thread on the XBMC forum.</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <website></website>
+    <source>https://github.com/XBMC-Addons/script.artwork.downloader</source>
+    <forum>http://forum.xbmc.org/showthread.php?tid=114633</forum>
+    <email></email>
+    <broken>This add-on is no longer functional and has been replaced by Kodi core functionality</broken>
+  </extension>
+</addon>
+
+<addon id="script.common.plugin.cache" name="Common plugin cache" provider-name="anxdpanic, TheCollective" version="2.6.1">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+    </requires>
+    <extension point="xbmc.service" library="resources/lib/entry_point.py" start="startup"/>
+    <extension point="xbmc.python.module" library="resources/lib/storage_server/"/>
+    <extension point="xbmc.addon.metadata">
+        <news>
+[fix] shutdown taking longer than 5 seconds
+[fix] ignore encoding issues for socket data
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <platform>all</platform>
+        <summary lang="en_GB">A common caching API for Kodi add-ons.</summary>
+        <license>GPL-3.0-only</license>
+        <source>https://github.com/anxdpanic/script.common.plugin.cache</source>
+    </extension>
+</addon>
+
+<addon id="script.embuary.helper" name="Embuary Helper" version="1.4.9" provider-name="sualfred">
+    <requires>
+        <import addon="xbmc.python" version="2.26.0"/>
+        <import addon="script.module.pil" version="1.1.7"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.python.pluginsource" library="plugin.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Embuary Helper Script</summary>
+        <description lang="en_GB">Helper script to provide features and functions to the Embuary skin. A full documentation can be found on GitHub: https://github.com/sualfred/script.embuary.helper/wiki</description>
+        <platform>all</platform>
+        <license>GPL-2.0-only</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=345318</forum>
+        <source>https://github.com/sualfred/script.embuary.helper</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="script.extendedinfo" name="OpenInfo" version="6.2.4" provider-name="A4K">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+		<import addon="script.module.pil" version="1.1.7"/>
+		<import addon="plugin.video.youtube" version="6.2.2"/>
+		<import addon="script.module.requests" version="2.9.1"/>
+		<import addon="script.skin.helper.service" version="1.0.0"/>
+		<import addon="resource.images.studios.white" version="0.0.18"/>
+		<import addon="plugin.video.openmeta" version="1.0.0" optional="true"/>
+	</requires>
+	<extension point="xbmc.python.script" library="script.py"/>
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<item library="context.py">
+				<label>OpenInfo</label>
+				<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,actor) | String.IsEqual(ListItem.dbtype,director)</visible>
+			</item>
+		</menu>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>false</reuselanguageinvoker>
+		<platform>all</platform>
+		<summary>Fork of the ExtendedInfo script from phil65</summary>
+		<description>This script offers various possibilities to display online content inside skins as well as a complete MovieDB browser including info dialogs for various media types. Needs skin implementation for lot of functions and OpenMeta for library functions.</description>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot1.jpg</screenshot>
+			<screenshot>resources/screenshot2.jpg</screenshot>
+			<screenshot>resources/screenshot3.jpg</screenshot>
+		</assets>
+		<news>
+		6.2.4 - Specify param in TV Show ID
+		6.2.3 - Fix TV Show trailers
+		6.2.2 - Added ability to search using the tvdb_id for "extendedepisodeinfo"
+		6.2.1 - Fix context menu now available for widgets pointing to OpenInfo's video addon items
+		6.2.0 - Added context menu force "player select" to the play button, available via "c" and long press "enter" button
+		</news>
+	</extension>
+</addon>
+
+<addon id="script.favourites" name="Favourites script" version="8.0.0" provider-name="ronie, `Black">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="be_BY">Favourites script</summary>
+		<summary lang="bg_BG">Скрипт "Любими"</summary>
+		<summary lang="ca_ES">Script Preferit</summary>
+		<summary lang="cs_CZ">Script pro Oblíbené</summary>
+		<summary lang="da_DK">Favoritscript</summary>
+		<summary lang="de_DE">Favoriten-Skript</summary>
+		<summary lang="el_GR">Script Αγαπημένων</summary>
+		<summary lang="en_GB">Favourites script</summary>
+		<summary lang="en_NZ">Favourites script</summary>
+		<summary lang="en_US">Favorites script</summary>
+		<summary lang="es_ES">Script de Favoritos</summary>
+		<summary lang="es_AR">Favoritos</summary>
+		<summary lang="fi_FI">Suosikit skripti</summary>
+		<summary lang="fr_FR">Script Favoris</summary>
+		<summary lang="fr_CA">Le script des favoris</summary>
+		<summary lang="gl_ES">Script de Favoritos</summary>
+		<summary lang="he_IL">סקריפט מועדפים</summary>
+		<summary lang="hr_HR">Omiljene skripte</summary>
+		<summary lang="hu_HU">Kedvencek script</summary>
+		<summary lang="id_ID">Script favorit</summary>
+		<summary lang="it_IT">Script preferiti</summary>
+		<summary lang="ko_KR">즐겨찾기 스크립트</summary>
+		<summary lang="lt_LT">Mėgstamiausių skriptas</summary>
+		<summary lang="nl_NL">Favourietenscript</summary>
+		<summary lang="nb_NO">Favorittskript</summary>
+		<summary lang="pl_PL">Skrypt ulubionych</summary>
+		<summary lang="pt_PT">Script de Favoritos</summary>
+		<summary lang="pt_BR">Script Favoritos</summary>
+		<summary lang="ro_RO">Script Favorite</summary>
+		<summary lang="ru_RU">Скрипт "Избранное"</summary>
+		<summary lang="sv_SE">Favoritskript</summary>
+		<summary lang="tr_TR">Sık kullanılanlar betiği</summary>
+		<summary lang="zh_CN">收藏夹脚本</summary>
+		<description lang="be_BY">Fetches item from your Kodi favourites to populate Home menu/submenu with custom buttons.</description>
+		<description lang="bg_BG">Извлича информация от вашето меню "Любими" и показва допълнителни бутони в главното меню и подменюто.</description>
+		<description lang="ca_ES">Obtenir els temes Preferits dels seus Kodi per omplir el menú Inici / submenú amb botons personalitzats.</description>
+		<description lang="cs_CZ">Přenese položky z Oblíbených do Home menu/submenu pod vlastní tlačítka. </description>
+		<description lang="da_DK">Henter elementer fra din Kodi-favoritter til at fylde Hjemmemenu/undermenu med brugerbestemte knapper.</description>
+		<description lang="de_DE">Stellt die Einträge aus der Kodi-Favoriten-Liste für benutzerdefinierte Verknüpfungen auf dem Startbildschirm zur Verfügung.</description>
+		<description lang="el_GR">Χρησιμοποιεί αντικείμενα από τα αγαπημένα σας του Kodi για να συμπληρώσει τα προσαρμοσμένα πλήκτρα μενού/υπομενού της Αρχικής Οθόνης</description>
+		<description lang="en_GB">Fetches item from your Kodi favourites to populate Home menu/submenu with custom buttons.</description>
+		<description lang="en_NZ">Fetches item from your Kodi favourites to populate Home menu/submenu with custom buttons.</description>
+		<description lang="en_US">Fetches item from your Kodi favorites to populate Home menu/submenu with custom buttons.</description>
+		<description lang="es_ES">Usar ítems de tus favoritos de Kodi para crear menús y submenús personalizados</description>
+		<description lang="es_AR">Obtiene medios de sus favoritos en Kodi para enriquecer su menu inicio y sub carpetas con botones personalizados</description>
+		<description lang="fi_FI">Hakee Kodin suosikeista kohteita ja populoi sillä Koti-valikon / alivalikon muokatuilla napeilla.</description>
+		<description lang="fr_FR">Récupère l'élément depuis les favoris Kodi pour remplir le menu/sous-menu de la page d'accueil avec des boutons personnalisés.</description>
+		<description lang="fr_CA">Récupère l'élément de vos favoris Kodi pour remplir le menu d'accueil/le sous-menu avec des boutons personnalisés.</description>
+		<description lang="gl_ES">Obtén o elemento dos favoritos para estabelecer botóns personalizados no Menú Principal/Submenú</description>
+		<description lang="he_IL">מייבא פריט מהמועדפים שלך לאכלוס תפריט/תת תפריט עם לחצנים מותאמים אישית במסך הבית.</description>
+		<description lang="hr_HR">Dohvaća stavke iz vašeg Kodi 'Omiljeno' izbornika i popunjava Početni izbornik/podizbornik s prilagođenim tipkama.</description>
+		<description lang="hu_HU">Összegyűjti az elemeket az Kodi kedvencek közül és a központi menü almenüjébe helyezi egyedi gombokkal.</description>
+		<description lang="id_ID">Ambil item dari favorit Kodi Anda untuk mengisi menu/submenu Beranda dengan tombol suka-suka.</description>
+		<description lang="it_IT">Preleva elementi dai tuoi preferiti per popolare il menù principale ed i sottomenù con bottoni personalizzato.</description>
+		<description lang="ko_KR">Kodi 즐겨찾기에서 항목을 가져와 사용자 설정 버튼으로 홈 메뉴/서브메뉴에 표시합니다.</description>
+		<description lang="lt_LT">Paima elementus iš Kodi mėgstamiausiųjų, kad užpildytų pagrindinio meniu/submeniu individualiais mygtukais.</description>
+		<description lang="nl_NL">Haalt item van je Kodi favorieten op om in het Home menu/submenu te plaatsen via losse buttons.</description>
+		<description lang="nb_NO">Henter oppføringer fra favorittene dine i Kodi for å befolke hovedmenyen og undermenyen med egendefinerte knapper.</description>
+		<description lang="pl_PL">Pobiera pozycje z twoich ulubionych w celu zapełnienia menu/podmenu niestandardowymi przyciskami.</description>
+		<description lang="pt_PT">Obtém itens dos seus favoritos do Kodi para povoar o Menu Principal/submenu com botões personalizados.</description>
+		<description lang="pt_BR">Compila itens dos seus favoritos do Kodi para ocupar menus e submenus da tela inicial com botões personalizados.</description>
+		<description lang="ru_RU">Извлекает информацию из Вашего меню "Избранное" и отображает дополнительные кнопки в главном меню и подменю.</description>
+		<description lang="sv_SE">Hämtar objekt från dina Kodi-favoriter för att fylla ut hem-menyn med egna knappar.</description>
+		<description lang="zh_CN">将 Kodi 收藏夹项目用于主界面菜单/子菜单的自定义按钮。</description>
+		<disclaimer lang="be_BY">Needs skin support for it to be used properly</disclaimer>
+		<disclaimer lang="bg_BG">Необходима е поддръжка от страна на облика за коректно функциониране</disclaimer>
+		<disclaimer lang="ca_ES">Necessita Suport de la pell perquè sigui utilitzat correctament</disclaimer>
+		<disclaimer lang="cs_CZ">Pro správné použití je potřeba podpora skinu.</disclaimer>
+		<disclaimer lang="da_DK">Behøver skinsupport for at blive brugt ordentligt</disclaimer>
+		<disclaimer lang="de_DE">Benötigt Skin-Support um korrekt genutzt zu werden</disclaimer>
+		<disclaimer lang="el_GR">Απαιτείται υποστήριξη από το κέλυφος για να χρησιμοποιηθεί σωστά</disclaimer>
+		<disclaimer lang="en_GB">Needs skin support for it to be used properly</disclaimer>
+		<disclaimer lang="en_NZ">Needs skin support for it to be used properly</disclaimer>
+		<disclaimer lang="en_US">Needs skin support for it to be used properly</disclaimer>
+		<disclaimer lang="es_ES">Necesita ser soportado por el skin para poder funcionar correctamente</disclaimer>
+		<disclaimer lang="es_AR">Necesita soporte de mascara para ser usada correctamente</disclaimer>
+		<disclaimer lang="fi_FI">Toimiakseen kunnolla, skinin tulee tukea tätä</disclaimer>
+		<disclaimer lang="fr_FR">Nécessite le support du thème pour qu'il soit utilisé correctement</disclaimer>
+		<disclaimer lang="fr_CA">Le prise en charge de l'habillage est nécessaire pour qu'il soit utilisé correctement</disclaimer>
+		<disclaimer lang="gl_ES">Precisa da axuda da pel para que sexa utilizado correctamente</disclaimer>
+		<disclaimer lang="he_IL">להפעלה כראוי נדרשת תמיכה במעטפת</disclaimer>
+		<disclaimer lang="hr_HR">Zahtijeva podršku presvlake za ispravno korištenje</disclaimer>
+		<disclaimer lang="hu_HU">Felszín támogatás szükséges a helyes működéshez</disclaimer>
+		<disclaimer lang="id_ID">Memerlukan dukungan kulit untuk dapat digunakan dengan baik</disclaimer>
+		<disclaimer lang="it_IT">E' necessario che lo skin supporti lo script per funzionare correttamente</disclaimer>
+		<disclaimer lang="ko_KR">스킨에서 지원해야 합니다</disclaimer>
+		<disclaimer lang="lt_LT">Reikalingas teminės išvaizdos palaikymas tinkamam naudojimui</disclaimer>
+		<disclaimer lang="nl_NL">Heeft skinondersteuning nodig om correct te werken</disclaimer>
+		<disclaimer lang="nb_NO">Krever skallstøtte for å fungere riktig</disclaimer>
+		<disclaimer lang="pl_PL">Wymagane wsparcie skórki w celu poprawnego działania</disclaimer>
+		<disclaimer lang="pt_PT">Necessita de um tema compatível para funcionar correctamente.</disclaimer>
+		<disclaimer lang="pt_BR">Necessita de suporte da skin para ser usado adequadamente</disclaimer>
+		<disclaimer lang="ro_RO">Necesită suport din partea costumului pentru a fi folosit cum trebuie</disclaimer>
+		<disclaimer lang="ru_RU">Необходима поддержка скинов для корректного отображения</disclaimer>
+		<disclaimer lang="sl_SI">Potrebuje podporo preobleke, da bo uporabljeno pravilno.</disclaimer>
+		<disclaimer lang="sv_SE">Behöver skalsupport för att kunna användas riktigt</disclaimer>
+		<disclaimer lang="tr_TR">Düzgün kullanılabilmesi için dış görünüm desteğine ihtiyacınız var</disclaimer>
+		<disclaimer lang="zh_CN">正常使用需要皮肤支持</disclaimer>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=114671</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/ronie/script.favourites</source>
+	</extension>
+</addon>
+
+<addon
+  id="script.games.rom.collection.browser"
+  version="2.1.3"
+  name="Rom Collection Browser"
+  provider-name="malte">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.rom.collection.browser" version="1.0.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>game</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="be">Import, browse and launch games in XBMC</summary>
+    <summary lang="ca">Importa, cerca i arranca jocs en l'XBMC</summary>
+    <summary lang="da">Importere, gennemse og starte spil i XBMC</summary>
+    <summary lang="de">Importiert, verwaltet und startet Spiele in XBMC</summary>
+    <summary lang="el">Εισαγάγετε, αναζητήστε και εκτελέστε παιχνίδια στο XBMC.</summary>
+    <summary lang="en">Import, browse and launch games in XBMC</summary>
+    <summary lang="en_NZ">Import, browse and launch games in XBMC</summary>
+    <summary lang="es">Importa, explora y ejecuta juegos en XBMC</summary>
+    <summary lang="fr">Importez, parcourez et lancez vos jeux depuis XBMC</summary>
+    <summary lang="fr_CA">Importer, parcourir et lancer des jeux dans XBMC</summary>
+    <summary lang="gl">Importar, buscar e executar xogos no XBMC</summary>
+    <summary lang="hu">Konzol játék ROM-ok böngészése</summary>
+    <summary lang="id">Impor, telusuri dan mainkan permainan di XMBC</summary>
+    <summary lang="it">Importa, sfoglia e lancia i giochi da XBMC</summary>
+    <summary lang="nl">Importeer, doorzoek en start spellen in XBMC</summary>
+    <summary lang="pl">Importowanie, przeglądanie i uruchamianie gier w XBMC</summary>
+    <summary lang="pt">Importe, navegue e execute jogos no XBMC</summary>
+    <summary lang="pt_BR">Importe, navegue e execute jogos no XBMC</summary>
+    <summary lang="ru">Импорт, обзор и запуск игр в XBMC</summary>
+    <summary lang="sv">Importera, bläddra och starta spel i XBMC</summary>
+    <summary lang="zh">在 XBMC 中导入、浏览和运行游戏</summary>
+    <description lang="be">With this Addon you can browse and launch emulator roms and standalone games in XBMC. See the wiki page for more information: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;First Use:&#10;  * On first launch RCB will start a simple configuration wizard&#10;  * After the wizard is completed RCB will ask you to import your games&#10;  * If needed you can launch the wizard anytime via context menu&#10;  * Just press "C" on your keyboard or "Menu" on your remote&#10;&#10;Features:&#10;  * scan your rom folders and import games to local database&#10;  * scrape artwork and meta data from various online sources&#10;  * import local available descriptions, artwork and videos&#10;  * filter games by console, genre, year and publisher&#10;  * favorites function&#10;  * automatic video playback in video window&#10;  * fullscreen video browser&#10;  * game details page&#10;  * dedicated MAME views to display cabinets and marquees&#10;  * launch roms and standalone games in solo or non-solo mode&#10;  * detect games in zip and 7z archives and ask user which game to load&#10;  * direct launching of savestate files&#10;  * ...&#10;</description>
+    <description lang="de">Mit diesem Addon können Roms und PC-Spiele verwaltet und gestartet werden. Mehr Informationen im RCB wiki: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Erste Schritte:&#10;  * Beim ersten Aufruf startet RCB einen Konfigurations-Assistenten&#10;  * Nach der Konfiguration importiert RCB die Spiele in seine Datenbank&#10;  * Der Assistent kann auch jederzeit aus RCB heraus gestartet werden&#10;  * Drücke dazu "C" auf der Tastatur oder "Menu" auf der Fernbedienung&#10;&#10;Features:&#10;  * Scannt Verzeichnisse rekursiv und importiert Spiele in die Datenbank&#10;  * Liest Artwork und Metadaten aus verschiedenen Online-Quellen&#10;  * Importiert lokal verfügbare Infos, Artwork und Videos&#10;  * Filtert Spiele nach Konsole, Genre, Jahr und Herausgeber&#10;  * Favoriten-Funktion&#10;  * Automatisches Abspielen von Videos&#10;  * Fullscreen Video Browser&#10;  * Detailseite mit weiteren Spiele-Infos&#10;  * spezielle MAME Sichten für Cabinets und Banner&#10;  * Startet Spiele im Solo-Modus (beendet XBMC vor dem Start des Spiels)&#10;  * Erkennt Spiele in zip und 7z Archiven&#10;  * Savestates können direkt gestartet werden (Emulator-abhängig)&#10;  * ...&#10;</description>
+    <description lang="el">Με αυτό το Πρόσθετο μπορείτε να βρείτε και να παίξετε παιχνίδια εξομοιωτών (Rom) καθώς και αυτόνομα παιχνίδια στο XBMC. Δείτε τη σελίδα του wiki για περισσότερες πληροφορίες: http://code.google.com/p/romcollectionbrowser/wiki/Welcome&#10;&#10;Πρώτη Χρήση:&#10;  * Κατά την πρώτη εκτέλεση του RCB θα ξεκινήσει ένας οδηγός εγκατάστασης&#10;  * Μετά την ολοκλήρωση του οδηγού το RCB θα σας ζητήσει να εισάγετε τα παιχνίδια σας&#10;  * Αν χρειαστεί, μπορείτε να εκτελέσετε τον οδηγό ανά πάσα στιγμή από το μενού επιλογών&#10;  * Απλά πιέστε το "C" στο πληκτρολόγιό σας ή το "Μενού" στο τηλεχειριστήριό σας&#10;&#10;Χαρακτηριστικά:&#10;  * σαρώστε τους φακέλους των rom σας και εισάγετε παιχνίδια στην τοπική βάση δεδομένων&#10;  * λήψη εικόνων και μετα-δεδομένων μέσω της διαδικασίας του scrape από διάφορες διαδικτυακές πηγές&#10;  * εισαγωγή διαθέσιμων τοπικών περιγραφών, εικόνων και βίντεο&#10;  * φιλτράρισμα παιχνιδιών ανά παιχνιδομηχανή, είδος, έτος και εταιρεία&#10;  * λειτουργία αγαπημένων&#10;  * αυτόματη αναπαραγωγή βίντεο σε παράθυρο&#10;  * προβολή βίντεο πλήρους οθόνης&#10;  * σελίδα πληροφοριών παιχνιδιών&#10;  * εξειδικευμένες προβολές MAME για εμφάνιση cabinet και marquee&#10;  * έναρξη rom και παιχνιδιών σε λειτουργία solo και μη&#10;  * εντοπισμός παιχνιδιών σε αρχεία zip και 7z και ερώτηση χρήστη σχετικά με το ποιο παιχνίδι να φορτωθεί&#10;  * άμεση έναρξη των αποθηκευμένων αρχείων&#10;  * ...&#10;</description>
+    <description lang="en">With this Addon you can browse and launch emulator roms and standalone games in XBMC. See the wiki page for more information: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;First Use:&#10;  * On first launch RCB will start a simple configuration wizard&#10;  * After the wizard is completed RCB will ask you to import your games&#10;  * If needed you can launch the wizard anytime via context menu&#10;  * Just press "C" on your keyboard or "Menu" on your remote&#10;&#10;Features:&#10;  * scan your rom folders and import games to local database&#10;  * scrape artwork and meta data from various online sources&#10;  * import local available descriptions, artwork and videos&#10;  * filter games by console, genre, year and publisher&#10;  * favorites function&#10;  * automatic video playback in video window&#10;  * fullscreen video browser&#10;  * game details page&#10;  * dedicated MAME views to display cabinets and marquees&#10;  * launch roms and standalone games in solo or non-solo mode&#10;  * detect games in zip and 7z archives and ask user which game to load&#10;  * direct launching of savestate files&#10;  * ...&#10;</description>
+    <description lang="en_NZ">With this Addon you can browse and launch emulator roms and standalone games in XBMC. See the wiki page for more information: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;First Use:&#10;  * On first launch RCB will start a simple configuration wizard&#10;  * After the wizard is completed RCB will ask you to import your games&#10;  * If needed you can launch the wizard anytime via context menu&#10;  * Just press "C" on your keyboard or "Menu" on your remote&#10;&#10;Features:&#10;  * scan your rom folders and import games to local database&#10;  * scrape artwork and meta data from various online sources&#10;  * import local available descriptions, artwork and videos&#10;  * filter games by console, genre, year and publisher&#10;  * favourites function&#10;  * automatic video playback in video window&#10;  * fullscreen video browser&#10;  * game details page&#10;  * dedicated MAME views to display cabinets and marquees&#10;  * launch roms and standalone games in solo or non-solo mode&#10;  * detect games in zip and 7z archives and ask user which game to load&#10;  * direct launching of savestate files&#10;  * ...&#10;</description>
+    <description lang="es">Con este complemento puedes explorar y ejecutar ROMs de emulador y juegos independientes en XBMC. Visita la página wiki para más información: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Primer Uso:&#10;  * Al ejecutarse por primera vez, RCB mostrará un sencillo asistente de configuración&#10;  * Una vez completado el asistente, RCB te solicitará importar tus juegos&#10;  * Si lo necesitas, puedes ejecutar el asistente en cualquier momento a través del menú contextual&#10;  * Tan solo tienes que pulsar "C" en el teclado o "Menú" en el mando a distancia&#10;&#10;Características:&#10;  * escanea tus carpetas con ROMs e importa los juegos a una base de datos local&#10;  * descarga imágenes y metadatos desde varias fuentes online&#10;  * importa descripciones, imágenes y videos disponibles localmente&#10;  * filtra los juegos por consola, género, año y editor&#10;  * función de favoritos&#10;  * reproducción automática de videos en ventana de video&#10;  * navegador de videos a pantalla completa&#10;  * página de detalles del juego&#10;  * vistas de MAME dedicadas, mostrando máquinas y marcos&#10;  * ejecuta ROMs y juegos independiente en modo solo o no-solo&#10;  * detecta juegos en archivos zip y 7z y pregunta al usuario qué juego desea cargar&#10;  * ejecución directa de archivos de partidas guardadas&#10;  * ...&#10;</description>
+    <description lang="fr">Avec cette extension, vous pouvez parcourir et lancer des roms d'émulateur ainsi que des jeux autonomes. Visitez le wiki pour plus d'informations : http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;Première utilisation :&#10;* Au premier démarrage RCB lancera un assistant de configuration simplifié.&#10;* Une fois cette configuration terminée RCB vous proposera d'importer vos jeux.&#10;* Au besoin, vous pouvez relancer l'assistant de configuration à tout moment depuis le menu contextuel.&#10;* Appuyez sur la touche "C" de votre clavier ou sur "Menu" de votre télécommande.&#10;&#10;Caractéristiques :&#10;* Analyse votre dossier de roms et importe les jeux dans une base de données locale&#10;* Récupère les illustrations et métadonnées depuis différentes sources en ligne&#10;* Importe vos descriptifs, illustrations et vidéos stockés localement&#10;* Filtre vos jeux par console, genre, année et éditeur&#10;* Gestion des favoris&#10;* lecture automatique des vidéos dans une fenêtre&#10;* Navigation parmi les vidéos en plein écran&#10;* Fiche de jeux détaillée&#10;* Vues dédiées pour MAME affichant cabinets et marquees&#10;* Lancement des roms et jeux en mode solo ou non&#10;* Détecte les jeux dans les fichiers zip et 7z et demande à l'utilisateur quel jeux lancer&#10;* lance directement une sauvegarde&#10;&#10;</description>
+    <description lang="fr_CA">Avec cet addiciel vous pouvez parcourir et lancer des roms d'émulateurs et des jeux autonomes dans XBMC. Consulter le wiki pour plus d'informations : http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Première utilisation :&#10;* au premier lancement RCB lancera un assistant simple de configuration&#10;* un fois l'assistant terminé RCB vous demandera d'importer vos jeux&#10;* au besoin vous pouvez lancer l'assistant à tout moment avec le menu contextuel&#10;* pesez juste sur « C » sur votre clavier, ou « Menu » sur votre télécommande&#10;&#10;Caractéristiques :&#10;* balayer votre dossier de ROM et importer les jeux dans la base de données locale&#10;* extraire les illustrations et les métadonnées de diverses sources en ligne&#10;* importer les descriptions, les illustrations et les vidéos locales disponibles&#10;* filtrer les jeux par console, genre, année et éditeur&#10;* fonction favoris&#10;* lecture vidéo automatique dans la fenêtre vidéo&#10;* navigateur vidéo en plein écran&#10;* page de détails des jeux&#10;* vues MAME dédiées pour afficher les cabinets et les marquises&#10;* lancer les ROM et les jeux autonomes en mode solo ou non&#10;* détecter les jeux dans les archives zip et 7z et demander à l'utilisateur quel jeu charger&#10;* lancement direct des fichiers de sauvegarde d'état&#10;* ... &#10;</description>
+    <description lang="hu">Jelenlegi funkciók:&#10;  * játékok szűrése konzoltípus, műfaj, év és kiadó alapján&#10;  * rom-ok indítása külső emulátorral&#10;  * a program beállítása egy xml fájl segítségével&#10;  * egyszerű de testreszabható leírófájl-feldolgozó&#10;  * játékonként különböző képek és videók megjelenítése&#10;  * játéktartalom és kiegészítő információk megjelenítése&#10;</description>
+    <description lang="id">Dengan Addon ini Anda dapat menelusuri dan menjalankan rom emulator dan program permainan di XBMC. Lihat halaman wiki untuk informasi lebih lanjut: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Pemakaian Pertama:&#10;* Saat pertama kali menjalankan RCB akan memulai penuntun konfigurasi sederhana&#10;* Setelah tuntunan selesai RCB akan menanyakan Anda untuk mengimpor permainan&#10;* Jika diperlukan Anda dapat menjalankan tuntunan kapan saja melalui menu konteks&#10;* Tekan "C" pada papan ketik atau "Menu" pada remote Anda&#10;&#10;Fitur:&#10;* pindai folder rom Anda dan impor permainan ke basis data lokal&#10;* salin karya seni dan meta data dari berbagai sumber daring&#10;* impor deskripsi, karya seni dan video yang tersedia lokal&#10;* filter permainan berdasarkan konsol, tema, tahun dan penerbit&#10;* fungsi favorit&#10;* pemaran video otomatis di jendela video&#10;* Penelusuran video layar penuh&#10;* halaman rincian permainan&#10;* tampilan MAME dedikasi untuk menampilkan kabinet dan marquee&#10;* deteksi permainan dalam arsip zip dan 7z serta menanyakan pengguna permainan mana yang akan dimuat&#10;* menjalankan langsung dari berkas savestate&#10;* ...&#10;</description>
+    <description lang="it">Con questo addon puoi sfogliare e lanciare le rom degli emulatori o giochi standalone in XBMC. Consulta la pagina wiki per maggiori informazioni : http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Prima uso:&#10;  * Al primo avvio, RCB avvia una semplice procedura di configurazione&#10;  * Al termine, RCB ti chiederà di importare i tuoi giochi&#10;  * Se necessario, puoi avviare la procedura di configurazione in qualsiasi momento tramite il menu contestuale&#10;  * Premi semplicemente "C" sulla tua tastiera o il tasto "Menu" del tuo telecomando&#10;&#10;Caratteristiche:&#10;  * Scansiona le tue cartelle contenenti rom e importa i giochi in un database locale&#10;  * Esegui lo scraping degli artwork e dei metadati da varie sorgenti online&#10;  * Importa descrizioni, artwork e video già disponibili in locale&#10;  * Filtra i giochi per console, genere, anno e editore&#10;  * Funzione preferiti &#10;  * Esecuzione automatica dei video nella finestra video&#10;  * Sfoglia video a schermo intero&#10;  * Pagina dettagli del gioco&#10;  * Viste specifiche per MAME per visualizzare i cabinet e i marquee&#10;  * Lancia rom e giochi standalone in modalità "Solo" e "Non solo"&#10;  * Rileva giochi in archivi .zip e .7z, e chiede all'utente quale gioco eseguire&#10;  * Lancio diretto da file di salvataggio del gioco&#10;  * ...&#10;</description>
+    <description lang="nl">Met deze Add-on kan je zoeken en starten van emulator roms en alleenstaande Spellen in XBMC. Zie de wikipagina voor meer informatie:&#10;http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Bij eerste keer:&#10;* Bij de eerste keer Starten zal RCB een gemakkelijke configuratie wizard starten&#10;* Nadat de wizard gereed is zal RCB jou vragen jouw spellen te importeren&#10;* wanneer nodig kan je de wizard elke keer starten via het context menu&#10;* Druk alleen "C" op je toetsenbord of "menu"op jouw afstandsbediening&#10;&#10;Functies:&#10;* Scan jouw rom folders en importeer spellen naar jou lokale database&#10;* scrape Artwork en Meta data van uit verschillende online bronnen&#10;* importeer lokaal beschikbare omschrijvingen, artwork en video`s&#10;* Filter spellen op Console, genre, jaar en uitgever&#10;* Favorieten functie&#10;* Automatisch film terugspelen optie in videoscherm&#10;* Volledig scherm Video browser&#10;* Spel details pagina&#10;* Toegewijde MAME weergaven om Cabinets en marquees*&#10;* Start Roms en Alleenstaande spellen in Solo of niet-solo modus&#10;* detecteer spellen in zip en 7z archieven en vraag gebruiker welk spel te laden&#10;* direct starten van opgeslagen bestanden&#10;* ...&#10;&#10;</description>
+    <description lang="pt">Com este Addon pode navegar e jogar roms de emuladores e jogos individuais no seu XBMC. Veja a página de wiki para mais informação: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Primeiro uso:&#10;  * Na primeira execução, RCB iniciará um assistente de configuração&#10;  * Após a configuraçã estar completa, o RCB irá importar os seus jogos&#10;  * Se precisar, pode iniciar o assistente através do menu de contexto&#10;  * Basta premir "C" no seu teclado ou "Menu" no seu remoto&#10;&#10;Funcionalidades:&#10;  * analisar as suas pastas de roms e importar jogos para a base de dados local&#10;  * obter artwork e metadados de várias fontes online&#10;  * importar descrições, artwork e vídeos disponíveis localmente&#10;  * filtrar jogos por consola, género, ano e editora&#10;  * função de favoritos&#10;  * reprodução de vídeo automática na janela de vídeo&#10;  * navegador de vídeos em ecrã cheio&#10;  * página de detalhes do jogo&#10;  * vistas especiais de MAME para exibir cabinets e marquees&#10;  * iniciar roms e jogos autónomos em modo solo ou não-solo&#10;  * detectar jogos em ficheiros zip e 7z e perguntar ao utilizador qual é o jogo a iniciar&#10;  * iniciar directamente ficheiros de savestate&#10;  * ...&#10;</description>
+    <description lang="pt_BR">Com esse addon você pode navegar e lançar roms de emuladores e jogos através do xbmc. Veja a pagina de wiki para mais informações:&#10;http://code.google.com/p/romcollectionbrowser/wiki/Welcome.(\n)(\n)&#10;Primeiro Uso:&#10; No primeiro lançamento o RCB irá iniciar um assistente de configuração simples(&#10;*Depois de concluir o assistente RCB irá pedir para importar seus jogos&#10;*Se necessário, você pode iniciar o assistente a qualquer momento através do menu de contexto&#10;* Basta pressionar "C" no seu teclado ou "Menu" em seu controle remoto&#10;&#10;Características:&#10;* varredura de suas pastas com roms e importação de jogos para um banco de dados local&#10;* procura arte e meta-dados de várias fontes on-line&#10;* importação local para descrições e obras de arte e vídeos se disponíveis&#10;* filtrar jogos por console, gênero, ano e editor&#10;* função favoritos&#10;* reprodução automática de videos na janela do navegador(\n)&#10;*vídeo em tela cheia no navegador&#10;* pagina de detalhes do jogo&#10;* vistas dedicadas a MAME para exibir cabines e letreiros(\n)&#10;* lançamento de roms e jogos independentes no modo sozinho ou não sozinho&#10;* detectar jogos em arquivos ZIP e 7z e perguntar ao usuário qual jogo carregar&#10;* lançamento direto de arquivos de savestate&#10;.&#10;</description>
+    <description lang="ru">С помощью этого дополнения можно просматривать и запускать ROM эмуляторы и игры XBMC. Дополнительную информацию можно увидеть на странице Wiki по адресу: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Первый запуск:&#10;  * При первом запуске RCB будет запущен простой мастер конфигураций&#10;  * После завершения мастера RCB спросит Вас, какие игры импортировать&#10;  * Если нужно, вы можете запустить мастер повторно в контекстном меню&#10;  * Нажмите "C" на клавиатуре или "Menu" на пульте управления&#10;&#10;Возможности:&#10;  * Сканирование папок с образами игр и добавление их в вашу базу данных&#10;  * Искать обложки и мета данные  с различных онлайн источников&#10;  * загружать доступные локальные описания, обложки и видео&#10;  * фильтровать игры по типу консоли, жанру, году, издателю&#10;  * избранное&#10;  * автоматическое воспроизведение видео в окне&#10;  * полноэкранный видео браузер&#10;  * страница описаний игр&#10;  * dedicated MAME views to display cabinets and marquees&#10;  * Запускать образы и игры в одно и многопользовательском режимах&#10;  * определять игры в архивах zip и 7z и затем спрашивать пользователя, что загружать&#10;  * Прямой запуск по файлам сохранений&#10;  * ...&#10;</description>
+    <description lang="sv">Med detta tillägg kan du bläddra och starta emulatorbaserade ROMS och spel i XBMC.&#10;Se wiki för mer information: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Första start:&#10;  * Vid första start kommer RCB starta en enkel inställningsguide&#10;  * När guiden är klar kommer RCB be dig importera dina spel&#10;  * Om du behöver, kan du starta guiden när som helst via undermenyn&#10;  * Tryck "C" på ditt tangentbord eller "Meny" på din fjärrkontroll&#10;&#10;Egenskaper:&#10;  * sök igenom mappar med roms och importera spel till lokal databas&#10;  * skrapa bilder och metadata från olika onlinekällor&#10;  * importera lokala beskrivningar, bilder och filmer&#10;  * filtrera spel efter konsol, genre, år och utgivare&#10;  * favoriter&#10;  * automatisk filmuppspelning i videofönster&#10;  * fullskärmsbläddrare för film&#10;  * sida med detaljerad spelinformation&#10;  * dedikerade MAME-vyer för att visa spelkabinett&#10;  * starta roms och spel i solo eller non-solo läge&#10;  * hitta spel i zip och 7z arkiv och fråga användaren vilket spel att ladda&#10;  * direktstart av savestate fier&#10;  * ...&#10;</description>
+    <language></language>
+    <platform>android freebsd ios linux osx windows</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=70115</forum>
+    <website>https://code.google.com/p/romcollectionbrowser/</website>
+    <source>https://romcollectionbrowser.googlecode.com/svn/trunk/</source>
+  </extension>
+</addon>
+
+<addon id="script.globalsearch" name="Global Search" version="8.0.13" provider-name="ronie">
+	<requires>
+		<import addon="xbmc.python" version="2.26.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="bg_BG">Търси в библиотеката Ви.</summary>
+		<summary lang="ca_ES">Cerca a la teva biblioteca.</summary>
+		<summary lang="cs_CZ">Hledej v knihovně</summary>
+		<summary lang="de_DE">Durchsuchen Sie Ihre Bibliothek.</summary>
+		<summary lang="el_GR">Αναζήτηση στη Συλλογή σας.</summary>
+		<summary lang="en_GB">Search your library.</summary>
+		<summary lang="en_NZ">Search your library.</summary>
+		<summary lang="en_US">Search your library.</summary>
+		<summary lang="es_ES">Busca tu biblioteca.</summary>
+		<summary lang="fr_FR">Chercher dans la médiathèque.</summary>
+		<summary lang="fr_CA">Chercher dans votre bibliothèque</summary>
+		<summary lang="gl_ES">Buscar a súa biblioteca.</summary>
+		<summary lang="he_IL">חיפוש בספריית המדיה.</summary>
+		<summary lang="hr_HR">Pretražite svoju zbirku.</summary>
+		<summary lang="hu_HU">Keresés a médiatárban</summary>
+		<summary lang="id_ID">Cari pustaka Anda.</summary>
+		<summary lang="it_IT">Ricerca nella la tua libreria.</summary>
+		<summary lang="ko_KR">라이브러리 찾기</summary>
+		<summary lang="lt_LT">Ieškoti bibliotekoje.</summary>
+		<summary lang="nl_NL">Zoek in je bibliotheek.</summary>
+		<summary lang="nb_NO">Søk i biblioteket ditt</summary>
+		<summary lang="pl_PL">Przeszukaj swoją bibliotekę</summary>
+		<summary lang="pt_PT">Faça buscas na sua biblioteca.</summary>
+		<summary lang="pt_BR">Pesquise sua coleção.</summary>
+		<summary lang="ro_RO">Căutați în mediateca dumneavoastră.</summary>
+		<summary lang="ru_RU">Поиск в вашей медиатеке.</summary>
+		<summary lang="sl_SI">Iščite v svoji knjižnici.</summary>
+		<summary lang="sv_SE">Sök i ditt bibliotek.</summary>
+		<summary lang="tr_TR">Kitaplığını ara</summary>
+		<summary lang="zh_CN">资料库搜索</summary>
+		<description lang="bg_BG">Добавката може да намери всеки елемент във вашата видео и музикална библиотека.</description>
+		<description lang="ca_ES">Aquest complement pot trobat qualsevol article en la teva biblioteca de vídeo i música</description>
+		<description lang="cs_CZ">Tento dopněk dokáže najít libovolnou položku ve vaší audio a video knihovně.</description>
+		<description lang="de_DE">Dieses Add-on kann jeden Eintrag in Ihrer Video- und Musikbibliothek finden.</description>
+		<description lang="el_GR">Αυτό το πρόσθετο μπορεί να βρει κάθε αντικείμενο στις συλλογές σας.</description>
+		<description lang="en_GB">This addon can find any item in your video and music library.</description>
+		<description lang="en_NZ">This addon can find any item in your video and music library.</description>
+		<description lang="en_US">This addon can find any item in your video and music library.</description>
+		<description lang="es_ES">Este complemento puede encontrar cualquier elemento en tu biblioteca de vídeo y música.</description>
+		<description lang="fr_FR">Cette extension peut trouver tout élément dans la vidéothèque et l'audiothèque.</description>
+		<description lang="fr_CA">Cet addiciel peut trouver tout élément dans votre vidéothèque et dans votre audiothèque.</description>
+		<description lang="gl_ES">Este complemento pode atopar calquera elemento na súa biblioteca de medios.</description>
+		<description lang="he_IL">הרחבה זו יכולה למצוא כל פריט בספריות הווידאו והמוזיקה.</description>
+		<description lang="hr_HR">Ovaj dodatak može pronaći svaku stavku u vašoj videoteci ili fonoteci.</description>
+		<description lang="hu_HU">Ez a kiegészítő bármely elemet megtalálja a videó és audió médiatárban.</description>
+		<description lang="id_ID">Addon ini dapat mencari item apa saja di pustaka video dan musik Anda.</description>
+		<description lang="it_IT">Questo addon può trovare ogni elemento nella tua libreria video ed in quella musicale.</description>
+		<description lang="ko_KR">비디오와 음악 라이브러리의 모든 항목을 검색합니다.</description>
+		<description lang="lt_LT">Šis priedas gali rasti bet kokį elementą jūsų vaizdo ir garso bibliotekoje.</description>
+		<description lang="nl_NL">Deze addon kan elk item in je video- en muziekbibliotheken vinden.</description>
+		<description lang="nb_NO">Dette tillegget kan finne hva som helst i ditt film eller musikk bibliotek.</description>
+		<description lang="pl_PL">Ten plugin może odnaleźć dowolną pozycję w twojej bibliotece wideo oraz muzycznej.</description>
+		<description lang="pt_PT">Este addon pode encontrar qualquer item na sua biblioteca de vídeos e de músicas.</description>
+		<description lang="pt_BR">Este addon pode encontrar qualquer item na sua coleção de vídeos e música.</description>
+		<description lang="ro_RO">Acest supliment poate găsi orice element în mediateca dumneavoastră video și audio.</description>
+		<description lang="ru_RU">Это дополнение поможет найти любую запись в вашей медиатеке.</description>
+		<description lang="sl_SI">Ta dodatek lahko poišče katerokoli podatek v vaši knjižnici filmov in glasbe.</description>
+		<description lang="sv_SE">Detta tillägg kan hitta vilket objekt som helst i ditt video och musikbibliotek.</description>
+		<description lang="tr_TR">Bu eklenti video ve müzik kitaplığınızdaki herhangi bir öğeyi bulabilir.</description>
+		<description lang="zh_CN">此插件搜索你的视频和音乐资料库项目。</description>
+		<platform>all</platform>
+		<license>GPL-2.0-only</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=109301</forum>
+		<source>https://gitlab.com/ronie/script.globalsearch/</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+		<news>- fix issue with unneeded seeking</news>
+	</extension>
+</addon>
+
+<addon id="script.grab.fanart"
+    name="Grab Fanart" version="0.15.1" provider-name="robweber">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.kodi-six" version="0.1.0"/>
+    <import addon="script.module.future" version="0.16.0.4"/>
+  </requires>
+  <extension point="xbmc.python.library" library="default.py" />
+  <extension point="xbmc.service" library="service.py"  />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Exposes fanart as skin properties for slideshows, etc</summary>
+    <description lang="en_GB">Uses the Kodi database to grab all fanart from media items and put it into a skin property for use by skins/slideshows.</description>
+    <forum>https://forum.kodi.tv/showthread.php?tid=166572</forum>
+    <source>https://github.com/robweber/script.grab.fanart</source>
+	<website>https://github.com/robweber/script.grab.fanart</website>
+    <license>MIT</license>
+    <platform>all</platform>
+    <language>en</language>
+    <news>Version 0.15.1
+- Make compatible with Leia
+- Update libs for python 2/3 compatibility
+    </news>
+    <assets>
+    	<icon>resources/media/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.image.resource.select" name="Image Resource Select Addon" version="3.0.0" provider-name="ronie">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Image resource selection addon</summary>
+		<description lang="en_GB">Script for skinners to let users select an image resource addon.</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=239558</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/ronie/script.image.resource.select</source>
+	</extension>
+</addon>
+
+<addon id="script.module.arrow"
+		name="arrow"
+		version="0.15.5.001"
+		provider-name="crsmithdev, Razzeee">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+		<import addon="script.module.dateutil" version="2.8.1"/>
+		<import addon="script.module.backports.functools_lru_cache" version="1.5.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Arrow: better dates and times for Python</summary>
+		<description lang="en">Packed for Kodi from https://github.com/crsmithdev/arrow</description>
+		<platform>all</platform>
+		<license>Apache2</license>
+		<source>https://github.com/Razzeee/script.module.arrow</source>
+		<email>beenje AT gmail.com</email>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="script.module.autocompletion" name="AutoCompletion library" version="1.1.2" provider-name="Philipp Temminghoff (phil65)">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="script.module.simplejson" version="3.3.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Module providing some AutoCompletion functions</summary>
+        <description lang="en">Module providing some AutoCompletion functions</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE Version 2.1, February 1999</license>
+        <source>https://github.com/phil65/script.module.autocompletion</source>
+    </extension>
+</addon>
+
+<addon id="script.module.beautifulsoup"
+       name="BeautifulSoup"
+       version="3.2.1"
+       provider-name="Leonard Richardson (leonardr@segfault.org)">
+  <requires>
+    <import addon="xbmc.python"
+    		version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>HTML/XML parser for quick-turnaround applications like screen-scraping</summary>
+    <description>Beautiful Soup parses arbitrarily invalid SGML and provides a variety of methods and Pythonic idioms for iterating and searching the parse tree.</description>
+    <license>BSD</license>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.module.beautifulsoup4"
+       name="BeautifulSoup4"
+       version="4.6.2"
+       provider-name="Leonard Richardson (leonardr@segfault.org)">
+  <requires>
+    <import addon="xbmc.python"
+             version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Screen-scraping library</summary>
+    <description lang="en_GB">Beautiful Soup is a library that makes it easy to scrape information from web pages. It sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.</description>
+    <license>MIT</license>
+    <platform>all</platform>
+    <website>https://www.crummy.com/software/BeautifulSoup/</website>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.cherrypy"
+       name="CherryPy Kodi module"
+       version="17.4.0"
+       provider-name="marcelveldt, TheTimeWalker, CherryPy Team">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="script.module.six" version="1.9.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary>CherryPy webserver packaged as Kodi module</summary>
+        <description>CherryPy is a pythonic, object-oriented web framework
+            CherryPy allows developers to build web applications in much the same way they would build any other object-oriented Python program. This results in smaller source code developed in less time.
+            CherryPy is now more than ten years old and it is has proven to be very fast and stable. It is being used in production by many sites, from the simplest to the most demanding.
+        </description>
+        <license>BSD</license>
+        <source>https://github.com/marcelveldt/script.module.cherrypy</source>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="script.module.dateutil"
+       name="python-dateutil"
+       version="2.8.1"
+       provider-name="Paul Ganssle, Gustavo Niemeyer">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.six" version="1.12.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Extensions to the standard Python datetime module</summary>
+    <description lang="en_GB">The dateutil module provides powerful extensions to the standard datetime module, available in Python.</description>
+    <license>Apache-2.0, BSD-3-Clause</license>
+    <website>https://dateutil.readthedocs.io/en/stable/</website>
+    <source>https://github.com/dateutil/dateutil</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.musicbrainz"
+	name="Musicbrainz NGS webservice python bindings"
+	version="0.6.0.001"
+	provider-name="marcelveldt">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0"/>
+	</requires>
+	<extension point="xbmc.python.module"
+		library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Python bindings for Musicbrainz' NGS webservice</summary>
+		<summary lang="ru_RU">Сборка Python для веб-сервиса Musicbrainz 'NGS</summary>
+		<summary lang="uk_UA">Збірка Python для веб-сервісу Musicbrainz 'NGS</summary>
+		<description lang="en_GB">Kodi module library for the Python bindings for Musicbrainz' NGS webservice developed by alastair.</description>
+		<description lang="ru_RU">Библиотека модулей Kodi для сборки Python веб-службы Musicbrainz 'NGS, разработанная alastair.</description>
+		<description lang="uk_UA">Бібліотека модулів Kodi для збірки Python веб-служби Musicbrainz 'NGS, розроблена alastair.</description>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+		<source>https://github.com/marcelveldt/script.module.musicbrainz</source>
+		<platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="script.module.simplejson"
+       name="simplejson"
+       version="3.16.1"
+       provider-name="Bob Ippolito">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language></language>
+    <summary lang="en">Simple, fast, extensible JSON encoder/decoder for Python</summary>
+    <description lang="en">Simple, fast, extensible JSON encoder/decoder for Python</description>
+    <disclaimer lang="en">Code taken from https://pypi.org/project/simplejson/</disclaimer>
+    <license>MIT License, Academic Free License v. 2.1</license>
+    <website>https://pypi.org/project/simplejson/</website>
+    <source>https://github.com/simplejson/simplejson</source>
+  </extension>
+</addon>
+
+<addon id="script.module.skinbase"
+        name="[COLOR skyblue]MODULE SKINBASE[/COLOR]"
+        version="1.0.0"
+        provider-name="SKINBASE,Litti19928">
+  <requires>
+	<!--py3 compliant-->
+	<!--<import addon="xbmc.python" version="3.0.0" targetversion="3.0.0"/>-->
+	<import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="resources/lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <minversion></minversion>
+    <summary></summary>
+    <description></description>
+	<license></license>
+	<forum></forum>
+	<website></website>
+	<email></email>
+	<source></source>
+	<news></news>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+		<banner></banner>
+		<clearlogo></clearlogo>
+		<screenshot></screenshot>
+	</assets>
+  </extension>
+</addon>
+
+	<addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" version="1.0.34" provider-name="marcelveldt">
+	<requires>
+		<import addon="xbmc.python" version="2.13.0"/>
+		<import addon="xbmc.addon" version="12.0.0"/>
+		<import addon="script.module.pil" version="1.1.7"/>
+        <import addon="script.module.simplecache" version="1.0.0"/>
+        <import addon="script.module.metadatautils" version="1.0.0"/>
+	</requires>
+
+    <extension point="xbmc.python.library" library="default.py" />
+    <extension point="xbmc.service" library="service.py" start="login" />
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Helper service for Kodi skins providing rotating backgrounds</summary>
+        <description>Helper service for Kodi skins providing rotating backgrounds</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website></website>
+		<source>https://github.com/cartmandos/script.skin.helper.backgrounds</source>
+	</extension>
+</addon>
+
+	<addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="1.0.14" provider-name="marcelveldt">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0"/>
+		<import addon="xbmc.addon" version="12.0.0"/>
+		<import addon="script.module.pil" version="1.1.7"/>
+	</requires>
+    <extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Colorpicker for Kodi Skins. Part of Skin Helper Suite</summary>
+        <description>Colorpicker for Kodi Skins. Part of Skin Helper Suite</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website></website>
+		<source>https://github.com/cartmandos/script.skin.helper.colorpicker</source>
+	</extension>
+</addon>
+
+	<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.32" provider-name="marcelveldt, cartman.dos">
+	<requires>
+		<import addon="xbmc.python" version="2.13.0"/>
+		<import addon="xbmc.addon" version="12.0.0"/>
+        <import addon="script.module.simplejson" version="3.3.0"/>
+        <import addon="script.module.simplecache" version="1.0.0"/>
+        <import addon="script.module.metadatautils" version="1.0.0"/>
+        <import addon="script.module.cherrypy" version="11.0.1"/>
+	</requires>
+
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources\lib\context_animatedart.py">
+              <label>32024</label>
+              <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.EnableAnimatedPosters)) + Container.Content(movies)</visible>
+            </item>
+            <item library="resources\lib\context_pvr.py">
+                <label>32023</label>
+                <description>PVR artwork Configuration</description>
+                <visible>
+                    !String.IsEmpty(Window(Home).Property(SkinHelper.EnablePvrThumbs)) +
+                    [Window.IsActive(MyPVRChannels.xml) |
+                    Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRRecordings.xml) |
+                    Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml)]
+                </visible>
+            </item>
+            <item library="resources\lib\context_music.py">
+                <label>32023</label>
+                <description>Music artwork Configuration</description>
+                <visible>
+                    !String.IsEmpty(Window(Home).Property(SkinHelper.EnableMusicArt)) +
+                    [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]
+                </visible>
+            </item>
+        </menu>
+	</extension>
+
+    <extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+    </extension>
+	<extension library="service.py" point="xbmc.service" start="login" />
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Helper service for Kodi skins</summary>
+        <description>Helper service for Kodi skins</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website></website>
+		<source>https://github.com/cartmandos/script.skin.helper.service</source>
+	</extension>
+</addon>
+
+	<addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" version="1.0.22" provider-name="marcelveldt, cartman.dos">
+	<requires>
+		<import addon="xbmc.python" version="2.13.0"/>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+    <extension point="xbmc.python.script" library="default.py" />
+	<extension library="service.py" point="xbmc.service" start="login" />
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Helper service for Kodi skins</summary>
+        <description>Helper service for Kodi skins</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website></website>
+		<source>https://github.com/cartmandos/script.skin.helper.skinbackup</source>
+	</extension>
+</addon>
+
+	<addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.1.2" provider-name="marcelveldt,patrick-klein,cartman.dos">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0"/>
+		<import addon="xbmc.addon" version="12.0.0"/>
+        <import addon="script.module.metadatautils" version="1.0.0" />
+        <import addon="script.module.simplecache" version="1.0.0"/>
+	</requires>
+
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+        <provides>video audio</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="login" />
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Ready to use widgets for all kind of media types</summary>
+        <description></description>
+		<language></language>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website></website>
+		<source>https://github.com/cartmandos/script.skin.helper.widgets</source>
+		<news>
+			[B]v1.1.1[/B][CR]A lot of new widgets to choose from![CR]Bug fixes and other improvements[CR]Follow the forum thread about the latest news.[CR]https://forum.kodi.tv/showthread.php?tid=334820
+		</news>
+	</extension>
+</addon>
+
+<addon id="script.skin.info.service" name="Skin Info Service" version="2.0.0" provider-name="phil65">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<language/>
+		<summary lang="en">Script used by skins to show extended media info.</summary>
+		<description lang="en">This script fetches extended information for several media types (artists, albums, movie sets etc.). Needs skin support.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
+		<forum />
+		<source />
+		<email />
+	<assets>
+		<icon>icon.png</icon>
+	</assets>
+	<news>Updated for Leia by Latts.</news>
+	</extension>
+</addon>
+
+<addon id="script.skinshortcuts" name="Skin Shortcuts" version="1.0.20" provider-name="BigNoid,marcelveldt,auramod,cartmandos">
+	<requires>
+		<import addon="xbmc.python" version="2.20.0"/>
+		<import addon="script.module.simplejson" version="3.3.0"/>
+		<import addon="script.module.unidecode" version="0.4.14"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<news>Template improvements and bug fixes</news>
+		<description lang="bg">Добавка за облици, която осигурява просто управление и списък с потребителски преки пътища (изисква поддръжка от облика)</description>
+		<description lang="de">Add-on für Skins für einfache Bearbeitung und Auflistung von benutzerdefinierten Verknüpfungen (erfordert Skin-Unterstützung)</description>
+		<description lang="el">Πρόσθετο για κελύφη, το οποίο παρέχει έναν απλό τρόπο διαχείρισης και κατηγοριοποίησης των συντομεύσεων του χρήστη (πρέπει να υποστηρίζεται από το κέλυφος)</description>
+		<description lang="en">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+		<description lang="en_NZ">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+		<description lang="en_US">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+		<description lang="es">Complemento para las pieles para proporcionar una gestión sencilla y lista de atajos de usuario (requiere que la piel lo soporte)</description>
+		<description lang="fr_CA">Addiciel pour habillages qui fournit une gestion simple et un listage des raccourcis utilisateurs (exige la prise en charge de l'habillage)</description>
+		<description lang="gl">Complemento que fornece aos temas dunha xestión sinxela dos atallos dos usuarios (require soporte do tema)</description>
+		<description lang="hr">Dodatak za presvlake koja omogućava jednostavno upravljanje i prikaz korisnikovih prečaca (zahtijeva podršku presvlake) </description>
+		<description lang="hu">Felszín kiegészítő amely könnyen kezelhetővé és listázhatóvá teszi a felhasználói parancsikonokat (Felszín támogatás szükséges)</description>
+		<description lang="is">Viðbót fyrir viðmót til að halda utan um flýtivísa og fá yfirlit yfir þá (þarfnast stuðnings frá viðmóti)</description>
+		<description lang="it">Add-on per gli skin per consentire un facile gestione ed elenco delle scorciatoie utente (richiede che lo skin lo supporti)</description>
+		<description lang="lt">Priedas teminėms išvaizdoms, kad jos turėtų galimybę paprastai tvarkyti ir atvaizduoti vartotojo  sukurtas nuorodas (reikalingas teminės išvaizdos palaikymas)</description>
+		<description lang="nl">Add-on voor skins om te voorzien in het eenvoudig beheren en sorteren van gebruikers snelkoppelingen (vereist skin ondersteuning)</description>
+		<description lang="no">Tillegg for enkel administrering og opplisting av bruker-snarveier i tema (krever støtte i tema)</description>
+		<description lang="pl">Wtyczka dla skór, która zapewnia proste zarządzanie i tworzenie list skrótów użytkownika (wymaga wsparcia skóry)</description>
+		<description lang="pt">Um add-on que permite que os temas tenham recursos simples para gerir e listar atalhos de utilizadores (é necessário suporte do tema)</description>
+		<description lang="pt_BR">Add-on para que as skins possam prover gerenciamento de lista de atalhos para o menu principal (requer suporte da skin)</description>
+		<description lang="ru">Дополнение для обложек, предоставляющее простой способ управления и список пользовательских ярлыков (требуется поддержка обложкой)</description>
+		<description lang="sv">Skinntillägg som tillhandahåller enkel hantering och översikt av användargenvägar (om skinnet stöder det)</description>
+		<description lang="zh">插件为皮肤提供了简单的管理和用户连接方式列表 (需要皮肤支持)</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU General Public License, v2</license>
+		<forum>http://forum.xbmc.org/showthread.php?tid=178294</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/BigNoid/script.skinshortcuts</source>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+	</assets>
+	</extension>
+</addon>
+
+<addon id="script.toolbox" name="ToolBox Script" version="1.1.1" provider-name="phil65">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.simplejson" version="2.0.10"/>
+		<import addon="script.module.pil" version="1.1.7"/>
+	</requires>
+    <extension point="xbmc.python.script"           library="default.py">
+        <provides>executable</provides>
+    </extension>
+	<extension point="xbmc.addon.metadata">
+		<language/>
+		<summary lang="en">ToolBox Script</summary>
+		<description lang="en">This script exposes several python functions to the UI engine as well as some other stuff to make life for skinners a bit easier.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=207618</forum>
+		<source>https://github.com/phil65/script.toolbox</source>
+		<email>phil65@kodi.tv</email>
+	</extension>
+</addon>
+
+<addon id="script.tv.show.next.aired" name="TV Show - Next Aired" version="7.0.1" provider-name="WayneD,marcelveldt">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.thetvdb" version="1.0.20" />
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="bg">Информация за предстоящите ТВ сериали.</summary>
+		<summary lang="ca">Agafar informació de les sèries de TV que es retransmetran pròximament.</summary>
+		<summary lang="de">Erhalten Sie Infos über die nächsten Ausstrahlungstermine der Serien in Ihrer Bibliothek. </summary>
+		<summary lang="el">Λήψη πληροφοριών για την Επόμενη Προβολή των Τηλ. Σειρών</summary>
+		<summary lang="en">Get info for TV Shows Next Aired.</summary>
+		<summary lang="en_NZ">Get info for TV Shows Next Aired.</summary>
+		<summary lang="en_US">Get info for TV Shows Next Aired.</summary>
+		<summary lang="es">Obtener información de las siguientes emisiones de series.</summary>
+		<summary lang="es_MX">Obtener información de las siguientes emisiones de series.</summary>
+		<summary lang="fr">Obtenir les prochaines dates de diffusion de vos séries TV.</summary>
+		<summary lang="fr_CA">Obtenir les infos de prochaine diffusion des séries télé.</summary>
+		<summary lang="gl">Obter a info. das Seguintes Emisións das Series de TV.</summary>
+		<summary lang="he">קבל פרטי השידור הבא של תכניות הטלוויזיה.</summary>
+		<summary lang="hr">Nabavite informacije za sljedeću emitiranu TV seriju.</summary>
+		<summary lang="hu">Információ a sorozatok következő vetítési idejéről.</summary>
+		<summary lang="it">Ottieni info per le Serie TV trasmesse prossimamente.</summary>
+		<summary lang="ko">TV 쇼 방송 일정을 가져옵니다.</summary>
+		<summary lang="lt">Gauti TV laidos kitos transliacijos informaciją.</summary>
+		<summary lang="nl">Ophalen info voor komende TV afleveringen.</summary>
+		<summary lang="no">Hent informasjon om kommende TV-programmer.</summary>
+		<summary lang="pl">Pobieraj informacje o odcinkach seriali wkrótce na antenie.</summary>
+		<summary lang="pt">Obter info para Próximas Exibições de Séries TV.</summary>
+		<summary lang="pt_BR">Saiba sobre próximas exibições de séries de TV.</summary>
+		<summary lang="ro">Află despre emisiuni care urmează să fie difuzate</summary>
+		<summary lang="ru">Информация о следующих ТВ передачах.</summary>
+		<summary lang="sl">Pridobi informacije TV oddaj ki se bodo predvajale.</summary>
+		<summary lang="sv">Hämta info för nästa sändning av TV-serier.</summary>
+		<summary lang="zh">获取即将播出的剧集的信息。</summary>
+		<description lang="bg">Сваля информация за предстоящите ТВ сериали. Вече никога няма да пропускате епизод от ТВ сериали, които следите.</description>
+		<description lang="ca">Agafar informació de les sèries de TV que es retransmetran pròximament. No te'n perdràs cap mai més.</description>
+		<description lang="de">TV Show Next Aired liefert Termin-Informationen über die anstehenden Episoden der Serien aus der Datenbank. Dazu gibt es eine Wochenansicht mit allen in der nächsten Woche laufenden Episoden sowie (bei vorhandenem Skin Support) die direkte Integration der Informationen in die Ansichten des jeweiligen Skins. Sie werden nie wieder eine Folge verpassen.</description>
+		<description lang="el">Λήψη πληροφοριών για την Επόμενη Προβολή των Τηλ. Σειρών. Δε θα ξαναχάσετε επεισόδιο ποτέ.</description>
+		<description lang="en">Get info for TV Shows Next Aired. You'll never miss one again.</description>
+		<description lang="en_NZ">Get info for TV Shows Next Aired. You'll never miss one again.</description>
+		<description lang="en_US">Get info for TV Shows Next Aired. You'll never miss one again.</description>
+		<description lang="es">Obtener información de las siguientes emisiones de series. Nunca te perderás una de nuevo.</description>
+		<description lang="es_MX">Obtener información de las siguientes emisiones de series. Nunca te perderás una de nuevo.</description>
+		<description lang="fr">Ce script interroge votre médiathèque puis vas récupérer les infos sur les prochaines diffusions de vos séries. vous n'en manquerez plus aucune.</description>
+		<description lang="fr_CA">Obtenir les infos de prochaine diffusion des séries télé. Vous n'en manquerez plus jamais une.</description>
+		<description lang="gl">Obter a info. das Seguintes Emisións das Series de TV. Non esquecerá ningunha.</description>
+		<description lang="he">קבל פרטי השידור הבא של תכניות הטלוויזיה. לעולם לא תחמיץ שוב פרק.</description>
+		<description lang="hr">Nabavite informacije za sljedeću emitiranu TV seriju. Nikada nećete propustiti nijednu.</description>
+		<description lang="hu">Információ a sorozatok következő vetítési idejéről. Soha nem marad le mégegyszer semmiről.</description>
+		<description lang="it">Ottieni info per le Serie TV trasmesse prossimamente. Non ne perderai più una.</description>
+		<description lang="ko">TV 쇼 방송 일정을 가져옵니다. 놓치는 일은 절대 없을 것입니다.</description>
+		<description lang="lt">Gauti TV laidos kitos transliacijos informaciją. Jūs niekada daugiau jos nepraleisite.</description>
+		<description lang="nl">Ophalen info voor komende TV shows. Je zult ze nooit meer missen.</description>
+		<description lang="no">Få informasjon om neste TV-sending. Du vil aldri gå glipp av en episode igjen.</description>
+		<description lang="pl">Pobieraj informacje o odcinkach seriali wkrótce na antenie. Nigdy już żadnego nie przegapisz.</description>
+		<description lang="pt">Obter info para Próximas Exibições de Séries TV. Nunca mais vai perder uma.</description>
+		<description lang="pt_BR">Saiba sobre próximas exibições de séries de TV. Você nunca perderá um episódio.</description>
+		<description lang="ro">Află despre emisiuni care urmează să fie difuzate. Nu vei mai rata nici una.</description>
+		<description lang="ru">Получает информацию о следующих ТВ передачах. Теперь Вы никогда не пропустите ни одну ТВ передачу.</description>
+		<description lang="sl">Pridobi informacije TV oddaj ki se bodo predvajale. Nikoli več ne boste zamudili nobene epizode.</description>
+		<description lang="sv">Hämta info för nästa sändning av TV-Serie. Du kommer inte att missa en igen.</description>
+		<description lang="zh">获取即将播出的剧集的信息。你不会再错过好节目了。</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.xbmc.org/showthread.php?tid=186090</forum>
+		<website>http://github.com/marcelveldt/script.tv.show.next.aired</website>
+		<source>https://github.com/marcelveldt/script.tv.show.next.aired.git</source>
+	</extension>
+</addon>
+
+<addon id="service.kn.switchtimer" name="KN Switchtimer Service" provider-name="Birger Jesch" version="2.0.12">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="xbmc.json" version="6.20.0"/>
+    </requires>
+    <extension point="xbmc.service" library="service.py" start="login" />
+    <extension point="xbmc.python.script" library="handler.py" />
+    <extension point="kodi.context.item" library="addtimer.py">
+            <menu id="kodi.core.main">
+                <item library="addtimer.py">
+                    <label>30040</label>
+                    <visible>System.HasAddon(service.kn.switchtimer) + Window.IsVisible(tvguide)</visible>
+                </item>
+                <item library="handler.py">
+                    <label>30041</label>
+                    <visible>System.HasAddon(service.kn.switchtimer) + Window.IsVisible(tvguide)</visible>
+                </item>
+                <item library="deltimer.py">
+                    <label>30042</label>
+                    <visible>System.HasAddon(service.kn.switchtimer) + Window.IsVisible(tvguide)</visible>
+                </item>
+            </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">A switch timer for the PVR module of Kodi</summary>
+        <summary lang="de_DE">Ein Umschalttimer für das PVR-Modul von Kodi</summary>
+        <description lang="en_GB">Switching with the KN switchtimer from every point of view inside Kodi to a tv or radio broadcast at a given time - no more miss your favorite shows or sports events on tv.</description>
+        <description lang="de_DE">Mit dem KN Switchtimer schaltest Du auf Deine programmierte Sendung zur richtigen Zeit um - egal wo Du Dich gerade befindest. Nie wieder die Lieblingssendung oder wichtige Sportereignisse verpassen.</description>
+        <disclaimer lang="en_GB">Use at your own risk. Post suggestions, improvements or bug reports directly to Git.</disclaimer>
+        <disclaimer lang="de_DE">Benutzung auf eigene Gefahr. Anregungen, Verbesserungen oder Bugs bitte direkt über Git posten.</disclaimer>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <website>http://vdr4bj1.no-ip.org</website>
+        <source>https://github.com/b-jesch/service.kn.switchtimer</source>
+        <news>
+2.0.10 - special notification window added, recording capabilities added
+2.0.9  - Timerlist for showing and deleting timers, adding leading time offset in settings
+2.0.8  - Minor Bugfixes
+        </news>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart></fanart>
+            <screenshot></screenshot>
+        </assets>
+        <email>birger.jesch@gmail.com</email>
+    </extension>
+</addon>
+
+<addon id="service.library.data.provider" name="Library Data Provider" provider-name="BigNoid" version="0.3.2">
+	<requires>
+		<import addon="xbmc.json" version="7.9.0"/>
+		<import addon="xbmc.python" version="2.25.0"/>
+		<import addon="script.module.simplejson" version="3.3.0"/>
+		<import addon="script.module.routing" version="0.1.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+		<provides>video</provides>
+	</extension>
+	<extension library="service.py" point="xbmc.service" start="login" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Browse movies and episodes in a variety of sorted playlists.</summary>
+		<description lang="en">Plugin for skins to provide library data throughout the skin. It can also be used as standalone plugin to browse the playlists in the video library.</description>
+		<disclaimer lang="en" />
+		<platform>all</platform>
+		<language />
+		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=210063</forum>
+		<website>https://github.com/BigNoid/service.library.data.provider</website>
+		<email>big.noid@kodi.tv</email>
+		<source>https://github.com/BigNoid/service.library.data.provider</source>
+		<news>Added Polish and Hebrew translations, thx Etharr and Eng2Heb</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="service.nextup.notification" name="Nextup Service Notification" provider-name="im85288" version="2.0.00">
+    <requires>
+        <import addon="xbmc.python" version="2.26.0"/>
+    </requires>
+    <extension library="service.py" point="xbmc.service"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Provides a postplay screen or netflix style nextup pop up notification or both together!</summary>
+        <disclaimer lang="en">This plugin is a standalone plugin.</disclaimer>
+        <platform>all</platform>
+        <language/>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <broken>replaced by upnext</broken>
+    </extension>
+</addon>
+
+<addon
+  id="service.rom.collection.browser"
+  version="1.0.1"
+  name="Rom Collection Browser Service"
+  provider-name="carabalb, jimyx17, malte">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py" start="login"></extension>
+  <extension point="xbmc.addon.metadata">
+    <language></language>
+    <summary>Performs Rom Collection Browser startup tasks</summary>
+    <description>Some features in Rom Collection Browser require actions on XBMC startup: starting RCB after launching emulators in solo mode and scraping games on XBMC startup.</description>
+    <license>GPL 2.0</license>
+    <platform>android freebsd ios linux osx windows</platform>
+  </extension>
+</addon>
+
+<addon id="service.skin.widgets" name="Skin Widgets" version="0.0.33.007" provider-name="Martijn, phil65, YLLOW_DRAGON">
+	<requires>
+		<import addon="xbmc.json" version="6.0.0"/>
+		<import addon="xbmc.python" version="2.14.0"/>
+		<import addon="script.module.simplejson" version="2.0.10"/>
+	</requires>
+	<extension point="xbmc.service" library="default.py" start="login"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Skin widgets</summary>
+		<summary lang="ru_RU">Виджеты обложки</summary>
+		<summary lang="uk_UA">Віджети обкладинки</summary>
+		<description lang="en_GB">Skin widgets</description>
+		<description lang="ru_RU">Виджеты обложки</description>
+		<description lang="uk_UA">Віджети обкладинки</description>
+		<disclaimer lang="en_GB">For information visit the wiki page or XBMC forum.</disclaimer>
+		<disclaimer lang="ru_RU">Для получения дополнительной информации посетите вики-страницу или XBMC форум.</disclaimer>
+		<disclaimer lang="uk_UA">Для отримання додаткової інформації відвідайте вікі-сторінку або XBMC форум.</disclaimer>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<website></website>
+		<forum>http://forum.xbmc.org/showthread.php?tid=142389</forum>
+		<email>nkvoronov@gmail.com</email>
+		<source>https://github.com/nkvoronov/service.skin.widgets.git</source>
+		<email></email>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="service.xbmc.versioncheck" name="Version Check" version="0.5.11" provider-name="Team Kodi">
+    <requires>
+        <import addon="xbmc.python" version="2.14.0"/>
+    </requires>
+    <extension point="xbmc.service" library="resources/lib/runner.py" start="login"/>
+    <extension point="xbmc.addon.metadata">
+        <news>
+- add Kodi 19.0 beta1 release
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <summary lang="be">Kodi Version Check checks if you are running latest released version.</summary>
+        <summary lang="bg">Проверява дали ползвате най-новата версия на Kodi.</summary>
+        <summary lang="ca">Kodi Version Check comprova si està utilitzant la última versió publicada.</summary>
+        <summary lang="cs">Kontrola verze Kodi, zkontroluje, zda používáte nejnovější vydanou verzi.</summary>
+        <summary lang="da">Kodi undersøger om du benytter den nyeste version.</summary>
+        <summary lang="de">Kodi Versionsprüfung prüft, ob die neuste Version von Kodi installiert ist.</summary>
+        <summary lang="el">Ο Έλεγχος Έκδοσης Kodi εξετάζει αν έχετε την πιο πρόσφατη έκδοση του προγράμματος.</summary>
+        <summary lang="en">Kodi Version Check checks if you are running latest released version.</summary>
+        <summary lang="en_NZ">Kodi Version Check checks if you are running latest released version.</summary>
+        <summary lang="en_US">Kodi Version Check checks if you are running latest released version.</summary>
+        <summary lang="es">Kodi Version Check comprueba si está ejecutando la última versión de Kodi.</summary>
+        <summary lang="es_MX">Comprobador de Version de Kodi comprueba si se esta ejecutando ultima version publicada.</summary>
+        <summary lang="fi">Kodi Version Check tarkistaa onko käyttämäsi uusin versio.</summary>
+        <summary lang="fr">Le contrôle de version de Kodi vérifie si la dernière version sortie est utilisée.</summary>
+        <summary lang="fr_CA">Le contrôleur de version Kodi vérifie si vous utilisez la dernière version parue.</summary>
+        <summary lang="gl">Kodi Version Check verifica se está a executar a última versión.</summary>
+        <summary lang="he">בודק גרסת Kodi מוודא אם אתה מריץ את הגרסה הרשמית האחרונה.</summary>
+        <summary lang="hr">Kodi provjeritelj inačice provjerava imate li posljednju inačicu izdanja.</summary>
+        <summary lang="hu">Az Kodi verzió ellenőrző megvizsgálja, hogy a legújabb kiadást futtatja-e.</summary>
+        <summary lang="id">Kodi Version Check mengecek apakah Anda menggunakan versi rilis terbaru.</summary>
+        <summary lang="is">Kodi Version Check athugar hvort þú sért að keyra nýjustu viðurkennda útgáfu.</summary>
+        <summary lang="it">Kodi Version Check verifica se hai l'ultima versione rilasciata</summary>
+        <summary lang="ko">Kodi Version Checks는 최신 정식 릴리즈 버전을 사용중인지 검사해줍니다.</summary>
+        <summary lang="lt">Kodi Version Check patikrina ar naudojate naujausią versiją.</summary>
+        <summary lang="nl">Kodi versie-check controleert of je de laatst beschikbare versie hebt.</summary>
+        <summary lang="no">Kodi Versjonsettersyn sjekker om du kjører den sist utgitte versjonen.</summary>
+        <summary lang="pl">Dodatek Version Check sprawdza czy używasz najnowszej wersji Kodi.</summary>
+        <summary lang="pt">O Kodi Version Check verifica se a sua versão de lançamento do Kodi está actualizada.</summary>
+        <summary lang="pt_BR">Kodi Version Check verifica se você está executando a versão mais recente.</summary>
+        <summary lang="ro">Verificare versiune Kodi verifică dacă folosiți ultima versiune lansată.</summary>
+        <summary lang="ru">Kodi Version Check проверяет если вы используете последнюю версию</summary>
+        <summary lang="sk">Kodi Kontrola verzií overuje, či používate najnovšiu vydanú verziu.</summary>
+        <summary lang="sl">Preverjanje različice Kodi preveri, če imate nameščeno nazadnje izdano različico.</summary>
+        <summary lang="sv">Kodi Version Check kontrollerar om du använder den senaste versionen.</summary>
+        <summary lang="tr">Kodi Sürüm Kontrol yayınlanmış son sürümü kullanıp kullanmadığınızı kontrol eder.</summary>
+        <summary lang="zh">Kodi 版本检查检查你使用的是否为最新发布的版本。</summary>
+        <description lang="be">Kodi Version Check only supports a number of platforms/distros as releases may differ between them. For more information visit the kodi.tv website.</description>
+        <description lang="bg">Kodi Version Check поддържа няколко платформи/дистрибуции. За повече информация посетете страницата www.kodi.tv</description>
+        <description lang="ca">Kodi Version Check només és compatible amb una sèrie de plataformes / distribucions ja que les ultimes versions poden ser diferents entre elles. Per obtenir més informació, visiteu el lloc web kodi.tv.</description>
+        <description lang="cs">Kontrola verze Kodi podporuje pouze několik platforem/distribucí a verze mezi nimi se můžou lišit. Pro více informací navštivte webové stránky kodi.tv.</description>
+        <description lang="da">Kodi kan kun undersøge for opdateringer for visse platforme/udgaver, da der kan være forskel. For mere information, besøg kodi.tv.</description>
+        <description lang="de">Kodi Versionsprüfung unterstützt nur ein paar Plattformen/Distributionen, da sich die jeweiligen Veröffentlichungen unterscheiden können. Für weitere Informationen besuchen Sie die kodi.tv-Webseite.</description>
+        <description lang="el">Ο Έλεγχος Έκδοσης Kodi υποστηρίζει μόνο ορισμένα λειτουργικά συστήματα/διανομές, καθώς οι εκδόσεις διαφέρουν για το καθένα. Για περισσότερες πληροφορίες επισκεφθείτε το kodi.tv</description>
+        <description lang="en">Kodi Version Check only supports a number of platforms/distros as releases may differ between them. For more information visit the kodi.tv website.</description>
+        <description lang="en_NZ">Kodi Version Check only supports a number of platforms/distros as releases may differ between them. For more information visit the kodi.tv website.</description>
+        <description lang="en_US">Kodi Version Check only supports a number of platforms/distros as releases may differ between them. For more information visit the kodi.tv website.</description>
+        <description lang="es">Kodi Version Check solo soporta un número limitado de plataformas/distribuciones, ya que los lanzamientos pueden diferir entre ellos. Para más información, visite la web de kodi.tv.</description>
+        <description lang="fi">Kodi Version Check tukee vain joitain alustoja/distroja koska julkaisut saattavat poiketa toisistaan. Saadaksesi lisätietoa, vieraile kodi.tv:ssä.</description>
+        <description lang="fr">Le contrôle de version de Kodi ne prend en charge qu'un certain nombre de plate-formes/distributions car les versions peuvent varier entre elles. Pour plus d'informations, consulter le site Web kodi.tv.</description>
+        <description lang="fr_CA">Le contrôleur de version Kodi ne prend en charge qu'un certain nombre de plate-formes/distributions car les versions peuvent varier entre elles. Pour plus d'informations, visitez le site Web kodi.tv.</description>
+        <description lang="gl">Kodi Version Check só soporta un número limitado de plataformas/distribucións, xa que os lanzamentos poden diferir entre eles. Para máis información visitar o sitio web de kodi.tv.</description>
+        <description lang="he">בודק גרסת Kodi תומך רק במספר פלטפורמות/הפצות מאחר שסימון הגרסאות שונה בין אחת לשניה. למידע נוסף בקר באתר kodi.tv.</description>
+        <description lang="hr">Kodi provjeritelj inačice samo podržava broj platformi/distribucija koliko to dopuštaju pojedina izdanja. Za više informacija posjetite kodi.tv web stranicu.</description>
+        <description lang="hu">Az Kodi verzió-ellenőrző csak néhány platformot / disztribúciót támogat, mert a kiadások között különbségek lehetnek. További információkért keresse fel az kodi.tv oldalt.</description>
+        <description lang="id">Kodi Version Check hanya mendukung beberapa platform/distro karena rilisnya mungkin berbeda-beda. Untuk informasi lebih lanjut kunjungi situs kodi.tv.</description>
+        <description lang="it">Kodi Version Check supporta un numero di piattaforme e distribuzioni diverse tra loro. Per più informazioni visita il sito kodi.tv</description>
+        <description lang="ko">Kodi Versio Check는 일부 플랫폼/배포본만을 지원합니다. 자세한 정보는 kodi.tv 웹사이트에서 확인하세요</description>
+        <description lang="lt">Kodi Version Check palaiko tik kelias platformas/distribucijas, nes leidimai tarp jų gali skirtis. Norėdami gauti daugiau informacijos, apsilankykite Kodi.tv puslapyje.</description>
+        <description lang="nl">Kodi versie check ondersteunt alleen een aantal platforms/distro`s omdat uitgaven verschillen tussen hen. Voor meer informatie bezoek de kodi.tv website.</description>
+        <description lang="no">Kodi Versjonsettersyn støtter kun noen plattformer/distribusjoner fordi utgivelser kan være forskjellige mellom dem. Besøk kodi.tv for mer informasjon.</description>
+        <description lang="pl">Dodatek Version Check wspiera tylko część platform i dystrybucji. Więcej informacji na stronie kodi.tv</description>
+        <description lang="pt">O Kodi Version Check suporta apenas algumas plataformas/distribuições, porque os lançamentos podem não ser sempre idênticos. Para mais informação, visite o site kodi.tv.</description>
+        <description lang="pt_BR">Verificador de versões do Kodi somente suporta algumas plataformas/distros em que os lançamentos podem diferenciar entre si. Para maiores informações visite o website kodi.tv.</description>
+        <description lang="ru">Проверка новых версий Kodi поддерживается только на ряде платформ/дистрибутивов и они могут различаться между собой. Для получения доп. информации посетите сайт kodi.tv</description>
+        <description lang="sl">Preverjanje različice Kodi podpira le nekatere platforme/distribucije, saj se izdaje med njimi lahko zelo razlikujejo. Za več informacij obiščite spletišče kodi.tv</description>
+        <description lang="sv">Kodi Version Check stöder endeast ett antal plattformar/distributioner eftersom utgivningar kan skilja mellan dessa. För mer information besök kodi.tv webplatsen.</description>
+        <description lang="tr">Kodi Sürüm Kontrol sürümler arasında değişiklik olduğu için sadece birkaç platform/dağıtım destekler. Daha fazla bilgi için kodi.tv web sitesini ziyaret edin.</description>
+        <description lang="zh">Kodi 版本检查只支持部分平台/发行版，它们之间的版本可能会有所不同。欲了解更多信息，请访问 kodi.tv 网站。</description>
+        <disclaimer lang="be">Feel free to use this script. For information visit kodi.tv</disclaimer>
+        <disclaimer lang="bg">Ползвайте скрипта свободно. За повече информация посетете www.kodi.tv</disclaimer>
+        <disclaimer lang="ca">Sigues lliure d'utilitzar aquest script. Per més informació visita kodi.tv</disclaimer>
+        <disclaimer lang="cs">Neváhejte použít tento skript. Pro více informací navštivte kodi.tv</disclaimer>
+        <disclaimer lang="da">Du er velkommen til at bruge dette script. For information, besøg kodi.tv</disclaimer>
+        <disclaimer lang="de">Zögern Sie nicht, dieses Skript zu verwenden. Für Informationen besuchen Sie kodi.tv</disclaimer>
+        <disclaimer lang="el">Χρησιμοποιήστε αυτό το script ελεύθερα. Για πληροφορίες επισκεφθείτε το kodi.tv</disclaimer>
+        <disclaimer lang="en">Feel free to use this script. For information visit kodi.tv</disclaimer>
+        <disclaimer lang="en_NZ">Feel free to use this script. For information visit kodi.tv</disclaimer>
+        <disclaimer lang="en_US">Feel free to use this script. For information visit kodi.tv</disclaimer>
+        <disclaimer lang="es">Puede usar libremente este programa. Para más información, visite kodi.tv</disclaimer>
+        <disclaimer lang="es_MX">Sientase libre de utilizar este script. Para mas información visita kodi.tv</disclaimer>
+        <disclaimer lang="fr">Utiliser ce script si désiré. Pour plus d'informations, consulter le site kodi.tv</disclaimer>
+        <disclaimer lang="fr_CA">N'hésitez pas à utiliser ce script. Pour plus d'informations visitez kodi.tv</disclaimer>
+        <disclaimer lang="gl">Síntase libre de usar este script, para máis información visitar kodi.tv.</disclaimer>
+        <disclaimer lang="he">תרגיש חופשי להשתמש בסקריפט זה. למידע נוסף בקר ב-kodi.tv</disclaimer>
+        <disclaimer lang="hr">Slobodno koristite ovu skriptu. Za više informacija posjetite kodi.tv</disclaimer>
+        <disclaimer lang="hu">Használja bátran ezt a szkriptet! Információkért keresse fel az kodi.tv oldalt!</disclaimer>
+        <disclaimer lang="id">Jangan sungkan menggunakan script ini. Untuk informasi hubungi kodi.tv</disclaimer>
+        <disclaimer lang="it">Usa liberamente lo script. Per informazioni visita kodi.tv</disclaimer>
+        <disclaimer lang="ko">이 스크립트를 자유롭게 사용하세요. 관련 정보는 kodi.tv를 방문하세요.</disclaimer>
+        <disclaimer lang="lt">Galite laisvai naudoti šį scenarijų. Apsilankykite kodi.tv, norėdami gauti daugiau informacijos.</disclaimer>
+        <disclaimer lang="nl">Gebruik dit script vrijblijvend. Voor meer informatie bezoek kodi.tv</disclaimer>
+        <disclaimer lang="no">Du har fri tillatelse til å benytte dette skriptet. Besøk kodi.tv for informasjon</disclaimer>
+        <disclaimer lang="pl">Zapraszamy do używania tego dodatku. Więcej informacji na stronie kodi.tv</disclaimer>
+        <disclaimer lang="pt">Esteja à vontade para usar este script. Para mais informação, visite kodi.tv.</disclaimer>
+        <disclaimer lang="pt_BR">Sinta-se livre para usar este script. Para maiores informações visite kodi.tv</disclaimer>
+        <disclaimer lang="ro">Simțiți-vă liberi să folosiți acest script. Pentru informații vizitați kodi.tv</disclaimer>
+        <disclaimer lang="ru">Используйте этот скрипт на свое усмотрение. Для информации посетите kodi.tv</disclaimer>
+        <disclaimer lang="sl">Izvolite uporabiti ta skript. Za dodatne informacije obiščite kodi.tv</disclaimer>
+        <disclaimer lang="sv">Använd gärna detta skript. För information, besök kodi.tv</disclaimer>
+        <disclaimer lang="tr">Bu betiği kullanmaktan çekinmeyin. Daha fazla bilgi için kodi.tv adresini ziyaret edin</disclaimer>
+        <disclaimer lang="zh">可放心使用此脚本，更多信息访问 kodi.tv</disclaimer>
+        <platform>all</platform>
+        <license>GPL-2.0-or-later, GPL-3.0-or-later, Apache-2.0</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=160228</forum>
+        <website>https://kodi.tv</website>
+        <source>https://github.com/XBMC-Addons/service.xbmc.versioncheck</source>
+    </extension>
 </addon>
 
 <addon id="skin.aczg" version="4.4.2" name="[COLOR orange]A Confluence ZEITGEIST (KODI 18)[/COLOR]" provider-name="axbmcuser">
@@ -992,6 +3138,111 @@ I had this disabled because i want to be able to jump to the most right object b
 	</extension>
 </addon>
 
+<addon id="skin.aeon.nox.silvo" version="7.0.9" name="Aeon Nox: SiLVO" provider-name="SiLVO">
+	<requires>
+		<import addon="xbmc.gui" version="5.14.0" />
+		<import addon="script.skinshortcuts" version="1.0.10" />
+		<import addon="service.library.data.provider" version="0.0.7" />
+		<import addon="resource.images.studios.white" version="0.0.1" />
+		<import addon="resource.images.recordlabels.white" version="0.0.1" />
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="af_ZA">Geskep deur BigNoid, Modded deur SiLVO, en Widgets deur Mr. V</summary>
+		<summary lang="de_DE">Erstellt von BigNoid, modifiziert von SiLVO, Widgets von Mr. V</summary>
+		<summary lang="el_GR">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_AU">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_GB">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_NZ">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_US">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="es_ES">Creada por BigNoid, Modificada por SiLVO, y Widgets por Mr. V</summary>
+		<summary lang="et_EE">Looja: BigNoid, muutja: SiLVO, ja vidinad: Mr. V</summary>
+		<summary lang="fi_FI">BigNoidin tekemä ja SILVOn muokkaama. Widgetit Mr. V:ltä</summary>
+		<summary lang="fr_CA">Créé par BigNoid, modifié by SiLVO, et gadgets logiciels par Mr. V</summary>
+		<summary lang="fr_FR">Créé par BigNoid, Moddé par SiLVO, avec les widgets de M. V</summary>
+		<summary lang="gl_ES">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="he_IL">המעטפת נוצרה על ידי BigNoid, Modded by SiLVO, and והיישומונים על ידי Mr. VLO</summary>
+		<summary lang="hu_HU">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="is_IS">Útbúið af BigNoid, breytt af SiLVO, viðmótshlutar eftir Mr. V</summary>
+		<summary lang="it_IT">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="ko_KR">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="lt_LT">Sukūrė BigNoid, modifikavo SiLVO bei valdiklius pridėjo Mr. V</summary>
+		<summary lang="ms_MY">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="nb_NO">Laget av BigNoid, modifisert av SiLVO, og miniprogrammer av Mr. V.</summary>
+		<summary lang="nl_NL">Ontwikkeld door BigNoid, aangepast door SiLVO, en Widgets door Mr. V</summary>
+		<summary lang="pl_PL">Stworzona przez BigNoid, zmodyfikowana przez SiLVO, a gadżety autorstwa Mr. V</summary>
+		<summary lang="pt_BR">Criado por BigNoid, Modificado por SiLVO e Widgets por Mr. V</summary>
+		<summary lang="pt_PT">Criado por BigNoid, Modded por SiLVO, e Widgets por Mr. V</summary>
+		<summary lang="ro_RO">Creat de BigNoid, Modificat de SiLVO, și widget-uri deMr. V</summary>
+		<summary lang="ru_RU">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="sk_SK">Vytvoril BigNoid, Upravil SiLVO, miniaplikácie vytvoril Mr. V</summary>
+		<summary lang="sv_SE">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="th_TH">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="tr_TR">BigNoid tarafından oluşturuldu; Modlar SILVO'dan, Widget'lar Mr. V'den.</summary>
+		<summary lang="vi_VN">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V - Sự trở về</summary>
+		<summary lang="zh_CN">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="zh_TW">由BigNoid原創，SiLVO進行改造，以及由Mr. V製作的小工具</summary>
+		<description lang="af_ZA">Heeltemal oor ontwerp om 'n moderne aansig te skep, terwyl die klassieke Aeon gevoel behou word.</description>
+		<description lang="de_DE">Komplett neu designed für ein modernes Aussehen und das klassische Aeon-Feeling beizubehalten.</description>
+		<description lang="el_GR">Πλήρως επανασχεδιασμένο για να προσφέρει μια μοντέρνα αισθητική, διατηρώντας ταυτόχρονα την κλασική ομορφιά του Aeon.</description>
+		<description lang="en_AU">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_GB">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_NZ">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_US">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="es_ES">Completamente rediseñado para crear un aspecto moderno, pero conservando el toque clásico Aeon.</description>
+		<description lang="et_EE">Täielikult uuesti disainitud, et luua tänapäevane välimus samas säilitades klassikaline Aeoni tunnetus.</description>
+		<description lang="fi_FI">Täysin uudelleensuunniteltu moderni ulkoasu, kuitenkin tuntuen klassiselta Aeonilta.</description>
+		<description lang="fr_CA">Complètement remanié pour créer une apparence moderne, tout en conservant l’esprit classique d’Aeon.</description>
+		<description lang="fr_FR">Totalement revu pour créer un look moderne, en gardant l'expérience Aeon.</description>
+		<description lang="gl_ES">Redeseñado completamente para crear unha aparencia moderna ao tempo que mantén a sensación do clásico Aeon.</description>
+		<description lang="he_IL">עיצוב חדש היוצר מראה מודרני אך משמר את ההרגשה של Aeon הקלאסי.</description>
+		<description lang="hr_HR">Potpuno preoblikovan moderan izgled, uz zadržani klasični Aeon osjećaj.</description>
+		<description lang="hu_HU">Teljesen áttervezett modern kinézet, de megtartva a klasszikus Aeon érzetet.</description>
+		<description lang="is_IS">Endurhannað nútímalegt útlit í anda Aeon.</description>
+		<description lang="it_IT">Completamente ridisegnato per creare un look moderno, mantenendo la consueta qualità Aeon.</description>
+		<description lang="ko_KR">고전적인 Aeon 느낌을 유지하면서 현대적인 모습으로 완전히 다시 디자인하여 만들었습니다.</description>
+		<description lang="lt_LT">Pilnai atnaujinta, kad sukurtų modernią išvaizdą, išlaikant klasikinio Aeon pojūtį.</description>
+		<description lang="ms_MY">Direka semula sepenuhnya untuk hasilkan penampilan modern, tetapi masih mengekalkan penampilan Aeon klasik.</description>
+		<description lang="nb_NO">Helt redesignet for å tilby en moderne utforming, samtidig som den klassiske Aeon-følelsen er beholdt.</description>
+		<description lang="nl_NL">Volledig opnieuw ontworpen om een ​​moderne look te creëren, met behoud van het klassieke Aeon-gevoel.</description>
+		<description lang="pl_PL">Całkowicie przeprojektowana skóra Aeon, o nowoczesnym wyglądzie, zachowując klasyczny układ skóry Aeon.</description>
+		<description lang="pt_BR">Design completamente novo para criar um look moderno, mantendo o feeling do Aeon Clássico.</description>
+		<description lang="pt_PT">Completamente redesenhado para criar um visual moderno enquanto retém o toque clássico Aeon.</description>
+		<description lang="ro_RO">Complet reproiectat pentru a crea o înfățișare modernă, dar totuși păstrând atmosfera clasică Aeon.</description>
+		<description lang="ru_RU">Полностью переработан, чтобы создать современный облик, сохраняя при этом классическое чувство Aeon.</description>
+		<description lang="sk_SK">Kompletne prepracovaný dizajn s moderným vzhľadom pri zachovaní klasického štýlu Aeon.</description>
+		<description lang="sv_SE">Totalt omarbetad för att skapa ett modernt utseende, samtidigt som man behåller den klassiska Aeon-känslan.</description>
+		<description lang="th_TH">การออกแบบใหม่หมดจด เพื่อสร้างรูปลักษณ์ทันสมัย, ​​ขณะที่ยังคงความรู้สึกคลาสสิคของ Aeon.</description>
+		<description lang="tr_TR">Modern görünüme kavuşturmak için baştan tasarlandı, klasik Aeon hissi korundu</description>
+		<description lang="vi_VN">Thiết kế lại hoàn toàn để tạo nên một phong cách hiện đại, trong khi đó vẫn duy trì một cảm giác Aeon cổ điển.</description>
+		<description lang="zh_TW">完全的翻新設計以創造現代化的視覺感受，同時仍維持Aeon的經典外觀。</description>
+		<platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=210069</forum>
+		<website>https://github.com/mikesilvo164/Aeon-Nox-SiLVO</website>
+		<source>https://github.com/mikesilvo164/Aeon-Nox-SiLVO</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-09.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-10.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-11.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-12.jpg</screenshot>
+		</assets>
+		<news>[I][COLOR FFFF9800]v7.0.9[/COLOR][/I][CR]- Add music playlist contents for List view[CR]- Fix CinemaVision causing focus issue[CR]- Add Artist Slideshow 3.0 support[CR][CR][B]All updates may contain various changes and/or improvements[/B][CR]For a more complete list visit:[CR][I][COLOR FFFF9800]https://github.com/mikesilvo164/Aeon-Nox-SiLVO/commits/master[/COLOR][/I]</news>
+	</extension>
+</addon>
+
 <addon id="skin.confluence.6" version="5.0.14" name="[COLOR orange]Confluence Mod 6[/COLOR]" provider-name="Jezz_X, Team Kodi, SKINBASE">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0"/>
@@ -1021,6 +3272,191 @@ I had this disabled because i want to be able to jump to the most right object b
 		</assets>
 		<news>Updated language files,Update Kodi 18,Update Topics,Update 4K COVER,Update Icons !</news>
 		<size>42811574</size>
+	</extension>
+</addon>
+
+<addon id="skin.confluence.neon" version="5.0.18" name="[COLOR orange]Confluence NEON[/COLOR]" provider-name="SKINBASE,Jezz_X, Team Kodi,">
+	<requires>
+		<import addon="xbmc.gui" version="5.14.0"/>
+		<import addon="script.artistslideshow" version="2.1.3"/>
+		<import addon="script.artistslideshow-helper" version="0.4.4"/>
+		<import addon="script.favourites" version="7.0.0"/>
+		<import addon="script.grab.fanart" version="0.12.8"/>
+		<import addon="script.skinshortcuts" version="0.4.5"/>
+		<import addon="service.library.data.provider" version="0.0.7"/>
+		<import addon="context.skinshortcuts.addtomenu" version="0.0.1"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="1.0">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de_DE">Skins und Skin Themen by Guidos Skinbase.</summary>
+		<summary lang="en_GB">Skins and Skin Themen by Guidos Skinbase.</summary>
+		<description lang="de_DE">Guidos Skinbase Repo. Die Gröste Skinbase der Welt mit unzähligen Skin Mods  und Skin Themen aus der ganzen Welt. Ständig Erweitert und Verbessert, so sollte für jeden was dabei sein Viel Spass. </description>
+		<description lang="en_GB">Guido's Skinbase Repo. The world's largest skinbase with countless skin mods and skin themes from around the world. Constantly extended and improved, so there should be something for everyone Have fun.</description>
+		<platform>all</platform>
+		<news lang="de_DE">Guidos Skinbase Repo. Die Gröste Skinbase der Welt mit unzähligen Skin Mods  und Skin Themen aus der ganzen Welt. Ständig Erweitert und Verbessert, so sollte für jeden was dabei sein Viel Spass. </news>
+		<news lang="en_GB">Guido's Skinbase Repo. The world's largest skinbase with countless skin mods and skin themes from around the world. Constantly extended and improved, so there should be something for everyone Have fun.</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+		</assets>
+		<news>Updated language files,Update Kodi 18,Update Topics,Update 4K COVER,Update Icons !</news>
+		<size>42811574</size>
+	</extension>
+</addon>
+
+<addon id="skin.confluence2" version="4.6.9" name="[COLOR orange]Confluence 2.0[/COLOR]" provider-name="Jezz_X, Team Kodi,SKINBASE">
+	<requires>
+		<import addon="xbmc.gui" version="5.14.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="1.0">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="af_ZA">Confluence oortreksel deur Jezz_X.</summary>
+		<summary lang="ar_SA">جلد "كونفليونس" من صنع Jezz_x. (الجلد المبدأى لبرنامج إكس بى إم سى)</summary>
+		<summary lang="be_BY">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
+		<summary lang="bg_BG">Confluence облик от Jezz_X. (стандартния облик за Kodi)</summary>
+		<summary lang="ca_ES">Aparença Confluence per Jezz_X.</summary>
+		<summary lang="cs_CZ">Vzhled Confluence od Jezz_X.</summary>
+		<summary lang="cy_GB">Croen Confluence gan Jezz_X. (Croen rhagosodedig Kodi)</summary>
+		<summary lang="da_DK">Confluence-tema af Jezz_X.</summary>
+		<summary lang="de_DE">Confluence Skin von Jezz_X. (Standard-Skin von Kodi)</summary>
+		<summary lang="el_GR">Το κέλυφος Confluence από τον Jezz_X (προεπιλεγμένο κέλυφος του Kodi).</summary>
+		<summary lang="en_AU">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
+		<summary lang="en_GB">Confluence skin by Jezz_X.</summary>
+		<summary lang="en_NZ">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
+		<summary lang="en_US">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
+		<summary lang="es_AR">Skin Confluence por Jezz_X.</summary>
+		<summary lang="es_ES">Skin Confluence por Jezz_X.</summary>
+		<summary lang="es_MX">Skin confluende por Jezz_X. (skin por defecto de Kodi)</summary>
+		<summary lang="et_EE">Confluence rüü autorilt Jezz_X.</summary>
+		<summary lang="eu_ES">Confluence azala Jezz_X-ek egina.</summary>
+		<summary lang="fa_IR">پوسته Confluence تهیه شده بوسیله Jezz_X. (پوسته پیش فرض Kodi) </summary>
+		<summary lang="fi_FI">Confluence-ulkoasu. Tekijä Jezz_X.</summary>
+		<summary lang="fo_FO">Confluence útsjónd av Jezz_X. (Kodi's vanliga útsjónd)</summary>
+		<summary lang="fr_CA">Habillage Confluence par Jezz_X.</summary>
+		<summary lang="fr_FR">Confluence, un habillage par Jezz_X.</summary>
+		<summary lang="gl_ES">Pel Confluence por Jezz_Z. (Pel predefinida do Kodi)</summary>
+		<summary lang="he_IL">המעטפת Confluence של Jezz_X. (ברירת המחדל של Kodi)</summary>
+		<summary lang="hr_HR">Confluence presvlaka autora Jezz_X. (uobičajena Kodi presvlaka)</summary>
+		<summary lang="hu_HU">Confluence felszín. Készítő: Jezz_X (Kodi alapértelmezett felszín)</summary>
+		<summary lang="hy_AM">''Confluence'' - տեսք՝ Jezz_X. կողմից (Kodi - հիմնական տեսք)</summary>
+		<summary lang="id_ID">Skin Confluence oleh Jezz_X. (Skin bawaan Kodi)</summary>
+		<summary lang="is_IS">Confluence eftir Jezz_X. (Sjálfgefið útlit Kodi)</summary>
+		<summary lang="it_IT">Skin Confluence da Jezz_X. (Skin predefinita di Kodi)</summary>
+		<summary lang="ja_JP">Confluenceスキン by Jezz_X.</summary>
+		<summary lang="ko_KR">Jezz_X가 만든 Confluence 스킨.</summary>
+		<summary lang="lt_LT">Confluence teminė išvaizda, kurią sukūrė Jezz_X. (Kodi numatytoji teminė išvaizda)</summary>
+		<summary lang="lv_LV">Confluence apvalks no Jeez_X.</summary>
+		<summary lang="mk_MK">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
+		<summary lang="ms_MY">Penyatuan, kulit daripada Jezz_X. (Kulit lalai Kodi)</summary>
+		<summary lang="mt_MT">Dehra Confluence magħmula minn Jezz_X. (Id-dehra normali ta' Kodi)</summary>
+		<summary lang="nb_NO">Confluence-drakt av Jezz_X. (Kodis forvalgte drakt)</summary>
+		<summary lang="nl_NL">Confluence skin door Jezz_X. (Kodi's standaard skin)</summary>
+		<summary lang="pl_PL">Skóra Confluence autorstwa Jezz_X</summary>
+		<summary lang="pt_BR">Skin Confluence por Jezz_X. (Skin padrão do Kodi)</summary>
+		<summary lang="pt_PT">Tema Confluence por Jezz_X (tema padrão do Kodi)</summary>
+		<summary lang="ro_RO">Costumul Confluence de Jezz_X.</summary>
+		<summary lang="ru_RU">Обложка Confluence (стандартная обложка Kodi). Автор: Jezz_X.</summary>
+		<summary lang="sk_SK">Confluence skin od Jezz_X. (predvolený skin Kodi)</summary>
+		<summary lang="sl_SI">Preobleka Confluence avtorja Jezz_X. (Privzeta preobleka za Kodi)</summary>
+		<summary lang="sq_AL">Maska Confluence nga Jazz_X (maska kryesore së Kodi)</summary>
+		<summary lang="sr_RS">Confluence маска аутора Jezz_X.</summary>
+		<summary lang="sr_RS@latin">Confluence maska autora Jezz_X.</summary>
+		<summary lang="sv_SE">Confluence, ett skal av Jezz_X.</summary>
+		<summary lang="szl">Skōra Confluence zrychtowanŏ ôd Jeez_X. (wychodnŏ skōra we Kodi)</summary>
+		<summary lang="tg_TJ">Пӯсти ҳамҷараёнӣ аз ҷониби Jezz_X. (Пӯсти пешфарзи Kodi)</summary>
+		<summary lang="th_TH">ชุดตกแต่ง Confluence โดย  Jezz_X (สกินเริ่มต้นของ Kodi)</summary>
+		<summary lang="tr_TR">Confluence dış görünümü. Jezz_X (Kodi'nin varsayılan dış görünümü)</summary>
+		<summary lang="uk_UA">Обкладинка Confluence (стандартна обкладинка Kodi). Автор: Jezz_X.</summary>
+		<summary lang="vi_VN">Giao diện Confluence bởi Jezz_X. (Giao diện mặc định của Kodi)</summary>
+		<summary lang="zh_CN">Jezz_X 开发的 Confluence 皮肤。</summary>
+		<summary lang="zh_TW">Jezz_X 製作的佈景主題（Kodi的預設佈景主題）</summary>
+		<description lang="af_ZA">Confluence is 'n kombinasie van konsepte van 'n klomp gewilde oortreksels, en 'n poging om hulle goeie idees te omvat en te integreer in 'n oortreksel wat maklik behoort te wees vir eerste keer Kodi gebruikers om te verstaan en te gebruik.</description>
+		<description lang="ar_SA">"كونفليونس" هو الجلد المبدأى لبرنامج إكس بى إم سى اﻹصدار 9.11 وما فوق. هو خلط بين اشهر اﻷجلده الاخرى معاً ومحاوله لتبنى ودمج افكارهم للخروج بِنِتَاج يُفترض به ان يكون سهل اﻹستيعاب بمجرد النظر لمستخدمى إكس بى إم سى المبتدئين.</description>
+		<description lang="be_BY">Confluence is the default skin for Kodi 9.11 and above. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="bg_BG">Confluence е стандартният облик на Kodi 9.11 и по-новите версии. Представлява смесица от концепциите на много от популярните облици. Целта е да се интегрират тези добри идеи в подходящ и удобен вид за хора, които се сблъскват за първи път с Kodi.</description>
+		<description lang="ca_ES">Confluence és una combinació de conceptes de moltes aparences populars i intenta adoptar i integrar les seves bones idees en una aparença que sigui senzilla d'entendre i utilitzar per als nous usuaris de Kodi.</description>
+		<description lang="cs_CZ">Confluence je kombinací konceptů z mnoha oblíbených vzhledů a pokouší se pojmout a integrovat jejich dobré nápady do vzhledu, který by měl být pro nové uživatele Kodi jednoduchý na pochopení a používání.</description>
+		<description lang="cy_GB">Confluence yw croen rhagosodedig Kodi 9.11 ac uwch. Mae'n gyfuniad o gysyniadau o nifer o grwyn poblogaidd ac mae'n ymdrechu i gyfuno eu syniadau da hwy i groen ddylai fod yn hawdd i ddefnyddiwr cyntaf Kodi ei deall a'i ddefnyddio.</description>
+		<description lang="da_DK">Confluence er en kombination af koncepter fra mange populære skins, og det forsøger at omfavne og integrere de gode ideer i et skin, der er let for førstegangsbrugere af Kodi at forstå og bruge.</description>
+		<description lang="de_DE">Confluence ist der Standardskin ab Kodi 14.0. Er ist eine Kombination mehrerer unterschiedlicher Skin-Konzepte und versucht dabei, die besten Ideen zu kombinieren, um einen einfachen Einstieg für neue Kodi-Nutzer zu ermöglichen.</description>
+		<description lang="el_GR">Το Confluence είναι η προεπιλεγμένη αμφίεση για τις εκδόσεις Kodi 14.0 και άνω. Είναι ένας συνδυασμός από πολλές δημοφιλής αμφιέσεις, και επιχειρεί να παρέχει τις καλύτερες ιδέες τους σε μία αμφίεση, το οποίο είναι εύκολο για τους αρχάριους χρήστες του Kodi να κατανοήσουν και να χρησιμοποιήσουν.</description>
+		<description lang="en_AU">Confluence is the default skin for Kodi 9.11 and above. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="en_GB">Confluence is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="en_NZ">Confluence is the default skin for Kodi 9.11 and above. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="en_US">Confluence is the default skin for Kodi 9.11 and above. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="es_AR">Confluence es una combinación de conceptos de muchos skins populares, e intenta abarcar e integrar lo mejor de ellos en un skin que sea sencillo de entender y utilizar para los nuevos usuarios de Kodi.</description>
+		<description lang="es_ES">Confluence es la skin por defecto de Kodi 9.11 y posteriores. Es una combinación de conceptos de muchas skins populares, e intenta abarcar e integrar lo mejor de ellas en una skin que sea sencilla de entender y utilizar para los nuevos usuarios de Kodi.</description>
+		<description lang="es_MX">Confluence es el skin por defecto para Kodi 9.11 en adelante. Es una combinación de conceptos de varias skins populares, e intenta adoptar e integrar sus buenas ideas en un skin que debería ser fá de entender y usar para quienes usen Kodi por primera vez.</description>
+		<description lang="et_EE">Confluence on Kodi vaikerüü alates versioonist 9.11. Confluence on paljude populaarsete rüüde kombinatsioon, üritades omavahel siduda nende parimaid lahendusi, et saavutada esmakasutajale selget ja kergelt kasutatavat tulemust.</description>
+		<description lang="eu_ES">Confluence hainbat azal ospetsutatik hartutako kontzeptuen konbinaketa da. Horietatik ideia onak hartu eta integratzen saiatzen da, Kodi lehen aldiz erabiltzen dutenentzat ulertzeko eta erabiltzeko erraza izango den azal batean.</description>
+		<description lang="fa_IR">Confluence پوسته پیش فرض Kodi در ویرایش 14 و بالاتر است. این پوسته ترکیبی از چند پوسته محبوب دیگر است و تلاش دارد بهترین ایده ها را با هم ترکیب کند، تا شروعی ساده و آسان را برای کاربران جدید Kodi امکان پذیر سازد.</description>
+		<description lang="fi_FI">Confluence on yhdistelmä useiden suosittujen ulkoasujen konsepteista, ja yritys omaksua ja integroida heidän hyvät ideat ulkoasuun, jonka pitäisi olla helppokäyttöinen ja -tajuinen kaikille Kodin käyttäjille.</description>
+		<description lang="fo_FO">Confluence er vanliga útsjóndin, sum er brúkt í Kodi síðan útg. 9.11. Hetta er ein samansjóðan av fleiri hugtøkum. Ætlanin er at útsjóndin skal lætta um móttøku og nýtslu av Kodi fyri nýggjar brúkarar.</description>
+		<description lang="fr_CA">Confluence est une combinaison de concepts provenant de plusieurs habillages populaires. Il tente d’inclure et d’intégrer leurs bonnes idées en un habillage qui devrait être facile à comprendre et à utiliser pour les utilisateurs débutants de Kodi.</description>
+		<description lang="fr_FR">Confluence s'inspire des concepts de nombreux habillages populaires, et constitue une tentative d'inclusion et d'intégration des meilleures idées afin de créer un habillage d'interface qui soit facile à comprendre et à utiliser pour les personnes découvrant Kodi.</description>
+		<description lang="gl_ES">Confluence é a pel predeterminada para Kodi 9.11 e posteriores. É unha combinación de conceptos de algunhas peles populares, e tenta abranguer e integrar  as súas mellores ideas nunha pel que sexa fácil de entender e utilizar para as usuarias que utilizan por primeira vez Kodi.</description>
+		<description lang="he_IL">המעטפת Confluence היא מעטפת ברירת המחדל של Kodi. המעטפת הינה תוצר של אימוץ מאפיינים ממעטפות פופולריות רבות תוך רצון לשלב מאפיינים אלה למעטפת פשוטה לשימוש ולהכרה ראשונית ע"י משתמשי Kodi חדשים.</description>
+		<description lang="hr_HR">Confluence je uobičajena presvlaka za Kodi 14.0 naviše. To je mješavina koncepta iz mnogih drugih popularnih presvlaka, pokušaj da se objedine njihove dobre osobine u presvlaku i da budu lagane za upotrebu i razumljive novim Kodi korisnicima.</description>
+		<description lang="hu_HU">A Confluence az alapértelmezett felszín a Kodihoz a 9.11-es verziótól kezdődően. Merít sok sok népszerű felszín elképzeléséből, megpróbálva vegyíteni a jó ötleteket úgy, hogy az könnyen kezelhető legyen a Kodival először találkozóknak is.</description>
+		<description lang="id_ID">Confluence merupakan skin bawaan untuk Kodi 9.11 dan selanjutnya. Merupakan kombinasi konsep dari beberapa skin populer, dan berusaha untuk merangkul dan menyatukan ide bagus mereka ke sebuah skin yang mudah dipakai dan dipahami oleh pengguna Kodi pertama kali.</description>
+		<description lang="is_IS">Confluence er sjálfgefið útlit Kodi 14.0 og nýrra. Það er samsetning hugmynda frá mörgum vinsælum útlitum og er tilraun til að fanga og innlima þær góðu hugmyndir í útlit sem sé einfalt fyrir fyrir nýja Kodi notendur að skilja og nota</description>
+		<description lang="it_IT">Confluence è la skin predefinita di Kodi dalla versione 14.0 in poi. È una combinazione di elementi provenienti da altre skin popolari e cerca di integrare e coinvolgere tutte le loro grandi idee in una skin facile da usare e comprendere per l'utente inesperto di Kodi.</description>
+		<description lang="ja_JP">Confluenceは、さまざまな人気のあるスキンのコンセプトを組み合わせ、ユーザが初めて Kodi に触れる際、使い勝手が良いようにアイデアを盛り込み、簡単で分かり易くユーザーが使用できるようにしてあります。</description>
+		<description lang="ko_KR">Confluence 는 Kodi 14.0 이상을 위한 기본 스킨입니다. 많은 인기 스킨의 컨셉과 좋은 아이디어를 모아서 하나의 스킨으로 만들었으며 초보자도 사용하기 쉽습니다.</description>
+		<description lang="lt_LT">Confluence yra numatytoji teminė išvaizda pradedant Kodi 9.11 versija. Tai daugelio populiarių teminų išvaizdų derinys. Bandymas priimti ir integruoti vartotojų idėjas į teminę išvaizdą katra turėtų būti lengvai suprantama  pirmą kartą naudojantiems Kodi</description>
+		<description lang="lv_LV">Confluence ir apvienota daudzu populāru apvalku koncepcija un centieni pieņemt un integrēt labākās idejas, lai jaunajiem Kodi ietotājiem to būtu viegli izprast un lietot.</description>
+		<description lang="mk_MK">Confluence е основниот изглед на Kodi 14.0 и нагоре. Тој е комбинација на концепти од повеќе популарни изгледи, и настојува да ги обедини и истакне нивните добри идеи во еден изглед разбирлив за почетници.</description>
+		<description lang="ms_MY">Penyatuan ialah kulit lalai untuk Kodi 9.11 dan ke atas. Ia merupakan gabungan konsep dari pelbagai kulit terkenal, dan berusaha untuk merangkumkan dan menyepadukan idea baik kulit-kulit tersebut menjadi satu kulit yang mudah difahami dan digunakan oleh pengguna baru Kodi .</description>
+		<description lang="mt_MT">Confluence hija d-dehra normali ta' Kodi 14.0 il-fuq.  Hija taħlita ta' kunċetti minn ħafna dehriet popolari, u tipporva tgħaqqad u tintegra l-aqwa ideat tagħhom f'dehra li għandha tkun faċli biex jifmuha u jużawha dawk l-utenti li qed jużaw Kodi għall-ewwel darba.</description>
+		<description lang="nb_NO">Confluence er forvalgt drakt for Kodi 9.11 og oppover. Det er en kombinasjon av konseptene fra mange populære drakter, og prøver å omfavne og integrere de gode idéene i en drakt som bør være lett å forstå og benytte seg av for nye Kodi-brukere.</description>
+		<description lang="nl_NL">Confluence is de standaard skin voor Kodi 15.0 en hoger. Het combineert de concepten van andere populaire skins, waarbij het tracht hun goede ideeën te integreren in een skin die gemakkelijk in gebruik is.</description>
+		<description lang="pl_PL">Confluence jest kombinacją koncepcji  wielu popularnych skór i próbą zawarcia tego, co w nich najlepsze w skórze, która będzie łatwa do opanowania dla początkującego użytkownika.</description>
+		<description lang="pt_BR">Confluence é a skin padrão do Kodi 9.11 e acima. É uma combinação de conceitos das mais populares skins, visando abraçar e integrar as boas ideias em uma skin  que seja fácil de entender e usar, destinada  aos usuários iniciantes do Kodi. </description>
+		<description lang="pt_PT">O tema "Confluence" é o tema padrão do Kodi 14.0 e superior. É uma combinação de conceitos a partir de muitos temas populares e tenta integrar as boas ideias dos mesmos, num tema que deverá ser fácil de entender e utilizar pelos novos utilizadores do Kodi.</description>
+		<description lang="ro_RO">Confluence este costumul implicit pentru Kodi 9.11 și versiunile ulterioare. Este o combinație de concepte împrumutate de la mai multe costume populare, care încearcă să îmbrățișeze și să integreze ideile lor bune într-un costum care să fie ușor de înțeles și folosit de către utilizatorii Kodi începători.</description>
+		<description lang="ru_RU">Confluence — это стандартная обложка Kodi, начиная с версии 9.11. Она представляет собой сочетание концепций, взятых из многих популярных обложек, в попытке интегрировать их удачные идеи в обложке, которая была бы простой для использования и понимания новыми пользователями Kodi.</description>
+		<description lang="sk_SK">Confluence je predvolený pre Kodi 9.11 a vyššie. Je kombináciou konceptov z mnoho populárnych skinov a pokusom integrovať ich dobré nápady do skinu, ktorý by bol ľahko zrozumiteľný a použiteľný pre nových používateľov Kodi.</description>
+		<description lang="sl_SI">Confluence je privzeta preobleka za Kodi 14.0 in novejše. Je kombinacija konceptov mnogih priljubljenih preoblek in poskuša zaobjeti in integrirati njihove dobre ideje v preobleko, ki bi bila preprosta za uporabo in razumevanje tudi novim uporabnikom.</description>
+		<description lang="sq_AL">Confluence është maska kryesore për Kodi 9.11 dhe verzionet më të lartë. Është nje kombinim nga shumë maska e popullarizuar dhe përpjeket për të përqafuar dhe integruar idetë më të mira në një maskë që të jetë sa më lehtë në përdorim dhe kuptim për përdoruasit duke e përdorur Kodi për herë të parë.</description>
+		<description lang="sr_RS">Confluence је мешавина концепата из многих других популарних маски, и покушај да се обједине њихове добре идеје у маску која би трeбала да буде лака за разумевање и употребу новим корисницима Kodi-а.</description>
+		<description lang="sr_RS@latin">Confluence je mešavina koncepata iz mnogih drugih popularnih maski, i pokušaja da se objedine njihove dobre ideje u masku koja bi trebala da bude laka za razumevanje i upotrebu novim korisnicima Kodi-a.</description>
+		<description lang="sv_SE">Confluence kombinerar koncept från många populära skal och försöker återanvända och integrera goda idéer för att skapa ett skal som är enkelt att förstå och använda för nya Kodi-användare.</description>
+		<description lang="szl">Confluence to je wychodnŏ skōra dlŏ Kodi 14.0 i nowszych. To je miszōng kōnceptōw ze mocki popularnych skōr i prōbuje te nŏjlepsze wkludzić do skōry, kerŏ winnŏ być prostŏ we użyciu i spokopiyniu dlŏ nowych używŏczōw Kodi.</description>
+		<description lang="tg_TJ">Пӯсти ҳамҷараёнӣ ҳамчун пӯсти пешфарз барои Kodi 9.11 ё версияи навтар истифода мешавад. Ин пӯст аз унсурҳои пӯстҳои машҳури дигар сохта шудааст ва ва ҳамаи фикрҳои беҳтарин дар як пӯст ҷамъ мекунад, то ки корбарони навомад тавонанд Kodi-ро ба осонӣ фаҳманд ва истифода баранд.</description>
+		<description lang="th_TH">Confluenceเป็นสกินเริ่มต้นสำหรับ Kodi 9.11 หรือสูงกว่า มันเป็นส่วนผสมของแนวคิดจากสกินที่ได้รับความนิยมและพยายามที่จะยอมรับและบูรณาการส่วนที่ดีของมันเข้าไปในสกิน ซึ่งน่าจะง่ายสำหรับผู้ใช้ Kodiใหม่ ที่จะเข้าใจและใช้งานได้ดี</description>
+		<description lang="tr_TR">Confluence Kodi 14.0 ve yukarısı için varsayılan dış görünümdür. Birçok popüler dış görünümün kavramlarını bir araya getirip ilk kez Kodi kullananlar için anlaşılması ve kullanımı kolaydır.</description>
+		<description lang="uk_UA">Confluence — це стандартна обкладинка Kodi, починаючи з версії 9.11. Концепції багатьох популярних обкладинок поєднано у спробі використати та інтегрувати їхні вдалі ідеї в обкладинці, що стала б зрозумілою та простою в застосуванні для нових користувачів Kodi.</description>
+		<description lang="vi_VN">Confluence là giao diện mặc định cho Kodi 9.11 and các phiên bản trở về trước. Đây là sự kết hợp các khái niệm đến từ các giao diện khác nhau nhằm hướng người dùng đến sự đơn giản và dễ sử dụng.</description>
+		<description lang="zh_CN">Confluence 集合了许多流行皮肤的创意，力求把这些优点融合到一个皮肤中，使得首次使用 Kodi 的用户能更容易上手。</description>
+		<description lang="zh_TW">Confluence 是從 Kodi 9.11 開始預設的佈景主題。它結合了許多受歡迎的佈景主題的概念，且試圖包含並整合它們的優點，使第一次使用 Kodi 的使用者可以簡單地上手。</description>
+		<platform>all</platform>
+		<license>GNU General Public License version 2</license>
+		<forum>https://forum.kodi.tv/forumdisplay.php?fid=125</forum>
+		<source>https://github.com/xbmc/skin.confluence</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshot-09.jpg</screenshot>
+		</assets>
+		<size>46925118</size>
+		<news>Der Standard Confluence ausgestattet mit verschiedenen Farb Themen.</news>
 	</extension>
 </addon>
 </addons>
