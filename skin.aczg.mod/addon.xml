@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.aczg.mod" version="4.4.2" name="[COLOR orange]A Confluence ZEITGEIST (MOD)[/COLOR]" provider-name="axbmcuser,skinbase">
+	<requires>
+		<import addon="xbmc.gui" version="5.14.0"/>
+		<import addon="service.library.data.provider.lite" version="0.3.4"/>
+		<import addon="service.listitem.helper" version="0.3.4"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="0.22">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+	    <summary lang="de_DE">"Ein Confluence ZEITGEIST "ist eine saubere und moderne Überarbeitung der Confluence-Haut.</summary>
+		<description lang="de_DE">"Ein Confluence ZEITGEIST "ist eine saubere und moderne Überarbeitung des Confluence-Skins. Es enthält hauptsächlich ein symbolbasiertes Hauptmenü ohne Scrollen und zwei neue Wandansichten, die die alte Miniaturansicht ersetzen. Unzählige andere kleine Grafikaktualisierungen und -optimierungen sind inklusive.</description>
+		<summary lang="en">"A Confluence ZEITGEIST" is a clean and modern rework of the Confluence skin.</summary>
+		<description lang="en">"A Confluence ZEITGEIST" is a clean and modern rework of the Confluence skin. It mainly features an icon-based main menu without the need for scrolling and two all new wall views, which replace the old thumbnail view. Countless other small graphics updates and optimizations are included.</description>
+		<platform>all</platform>
+		<license></license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=242892</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/axbmcuser/_repo/</source>
+		<news>[B]4.4.2[/B] (2020-02-16)
+- Some more tweaking regarding larger fonts (home screen, select dialog, settings, skin settings and more)
+- Slightly increased size of home screen addon shortcut icons (home screen)
+- Slightly increased size of recently added movie posters (home screen)
+- Tweaked some non-focus button textures and sizes (removed non-focus textures for some dialogs)
+- Other improvements
+- (In sync with Krypton skin version 3.4.1)
+
+[B]4.4.1[/B] (2020-02-15)
+- Other improvements (In sync with Krypton skin version 3.4.0)
+
+[B]4.4.0[/B] (2020-02-14)
+[B]4.3.9[/B] (2020-02-14)
+- Reworked all main menu icons for higher quality (Now supporting native 2160p icons if 4K system resolution is detected)
+- Reworked font sizes for multiple sections (home screen, favorites dialog, shutdown dialog, search dialog, videoinfo dialog) (Improved/larger fonts)
+- Added SkinSettings option to hide movie file name in DialogVideoInfo
+- Added new lightweight dependency for DialogVideoInfo mood backgrounds: service.listitem.helper
+- Other improvements
+- Version now in sync with Krypton skin version 3.3.9
+
+[B]4.3.7[/B] (2020-02-07)
+- Other improvements (In sync with Krypton skin version 3.3.7)
+
+[B]4.3.4[/B] (2020-01-29)
+- Other improvements
+
+[B]4.3.3[/B] (2020-01-29)
+- Added HFR overlay icon for 4k60 movie/episode content (WallViews, Home Screen Widgets)
+- Added some more options for "multiple images" background slideshow interval
+- Added option to change KODI logo on home screen (Kodi, hidden, madVR)
+- Added option to change search button action on home screen (search dialog, hidden, direct video library search)
+- Added experimental option for showing a madVR logo while using the startup fade in function
+- Added option to disable "mood background" for DialogVideoInfo
+- Movie/episode end time now showing when VideoOSD buttons are visible
+- Improved visual quality for DialogVideoInfo mood background blur (dithering)
+- Other improvements
+
+[B]4.3.2[/B] (2020-01-29)
+- DialogVideoInfo: Changed tv show poster alignment in episode view, optimized dynamic mood background
+- Optimized fade out gradients for wall views and DialogVideoInfo with better dithering
+- Other improvements
+
+
+		</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.png</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>
